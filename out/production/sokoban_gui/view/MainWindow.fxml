@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import view.GUIDisplayer?>
+<BorderPane xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.MyView">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+                  <MenuItem mnemonicParsing="false" onAction="#loadLevel" text="Open" />
+                  <MenuItem mnemonicParsing="false" text="Save" />
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <center>
+      <GUIDisplayer fx:id="GUIDisplayer" height="500.0" width="500.0" BorderPane.alignment="CENTER"
+                    wallFileName="C:\Users\Omer\workspace\sokoban_gui\resources\wall.jpg"
+                    boxFileName="C:\Users\Omer\workspace\sokoban_gui\resources\crate.jpg"
+                    playerFileName="C:\Users\Omer\workspace\sokoban_gui\resources\player.jpg"
+                    targetFileName="C:\Users\Omer\workspace\sokoban_gui\resources\target.jpg"
+                    floorFileName="C:\Users\Omer\workspace\sokoban_gui\resources\tile.jpg"
+      >
+         <BorderPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </BorderPane.margin></GUIDisplayer>
+   </center>
+   <bottom>
+      <TextField BorderPane.alignment="CENTER" />
+   </bottom>
+</BorderPane>
