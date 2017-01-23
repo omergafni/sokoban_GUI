@@ -4,9 +4,8 @@ import controller.Controller;
 
 public class ExitCommand implements Command {
 
-	Controller controller = null;
-		
-	
+	private Controller controller = null;
+
 	public ExitCommand(Controller ctrlr) {
 		this.controller = ctrlr;
 	}
@@ -14,7 +13,7 @@ public class ExitCommand implements Command {
 	@Override
 	public void execute() {
 		//controller.stop();
-		//System.out.println("exit command excecuted");
+		System.out.printf("exit command executed");
 	}
 	
 	public void setController(Controller controller) {
@@ -23,7 +22,5 @@ public class ExitCommand implements Command {
 
 	@Override
 	public void setParams(String[] params) {}
-	
-	
 
 }

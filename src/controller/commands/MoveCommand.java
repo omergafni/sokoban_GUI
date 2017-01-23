@@ -18,16 +18,17 @@ public class MoveCommand implements Command {
 		case "up":	  this.direction = Direction.UP; 
 					  break;
 			 
-		case "down":  this.direction = Direction.DOWN;;
+		case "down":  this.direction = Direction.DOWN;
 					  break;
 			
-		case "right": this.direction = Direction.RIGHT;;
+		case "right": this.direction = Direction.RIGHT;
 					  break;
 			
-		case "left":  this.direction = Direction.LEFT;;
+		case "left":  this.direction = Direction.LEFT;
 				      break;
 			
-		default:	  System.out.println("invalid direction");
+		default:	  direction = null;
+			   	      System.out.println("invalid direction");
 					  break;
 		}
 		
@@ -35,7 +36,8 @@ public class MoveCommand implements Command {
 	
 	
 	@Override
-	public void execute() throws IOException {
+	public void execute() throws Exception {
+		if(direction == null) throw new IOException("invalid direction\n");
 		model.move(direction);
 	}
 

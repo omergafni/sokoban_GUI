@@ -1,128 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/src/view/MyView.java" line="123" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="v1.0" />
-    <list id="14a69492-4d72-4884-a0d1-7c9632f8f3c1" name="Rejected commit: Default" comment="v1.0">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/controller/Controller$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/controller/Controller.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/controller/SokobanController.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/controller/client/CLIclient$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/controller/client/CLIclient.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/controller/commands/Command.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/controller/commands/DisplayCommand.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/controller/commands/ExitCommand.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/controller/commands/LoadCommand.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/controller/commands/MoveCommand.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/controller/commands/SaveCommand.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/controller/server/CLI.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/controller/server/ClientHandler.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/controller/server/MyServer$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/controller/server/MyServer.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/controller/server/Server.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/model/Model.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/model/MyModel.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/model/data/level/Level.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/model/data/level/LevelLoader.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/model/data/level/MyObjectLevelLoader.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/model/data/level/MyTextLevelLoader.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/model/data/level/MyXMLLevelLoader.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/model/data/worldObjects/Box.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/model/data/worldObjects/Floor.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/model/data/worldObjects/Player.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/model/data/worldObjects/Target.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/model/data/worldObjects/Wall.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/model/data/worldObjects/WorldObject.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/model/data/worldObjects/WorldObjectType.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/model/policy/MySokobanPolicy.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/model/policy/Policy.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/model/receivers/display/CLIDisplayer.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/model/receivers/display/Displayer.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/model/receivers/display/GUIDisplayer.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/model/receivers/load/LoadLevel.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/model/receivers/load/LoadObjectLevel.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/model/receivers/load/LoadTextLevel.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/model/receivers/load/LoadXMLLevel.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/model/receivers/move/Direction.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/model/receivers/move/Move.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/model/receivers/save/SaveLevel.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/model/receivers/save/SaveToObjFile.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/model/receivers/save/SaveToXMLFile.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/view/MyView$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/view/MyView.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/view/Run.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/view/SokobanDisplayer.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/view/View.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/crate.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/player.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/target.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/tile.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/wall.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/description.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/gradle.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.settings/org.eclipse.jdt.core.prefs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/view/MainWindow.fxml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build.fxbuild" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sokoban_gui.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/controller/Controller.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/controller/SokobanController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/controller/client/CLIclient.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/controller/commands/Command.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/controller/commands/DisplayCommand.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/controller/commands/ExitCommand.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/controller/commands/LoadCommand.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/controller/commands/MoveCommand.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/controller/commands/SaveCommand.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/controller/server/CLI.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/controller/server/ClientHandler.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/controller/server/MyServer.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/controller/server/Server.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/model/Model.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/model/MyModel.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/model/data/level/Level.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/model/data/level/LevelLoader.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/model/data/level/MyObjectLevelLoader.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/model/data/level/MyTextLevelLoader.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/model/data/level/MyXMLLevelLoader.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/model/data/worldObjects/Box.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/model/data/worldObjects/Floor.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/model/data/worldObjects/Player.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/model/data/worldObjects/Target.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/model/data/worldObjects/Wall.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/model/data/worldObjects/WorldObject.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/model/data/worldObjects/WorldObjectType.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/model/policy/MySokobanPolicy.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/model/policy/Policy.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/model/receivers/display/CLIDisplayer.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/model/receivers/display/Displayer.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/model/receivers/load/LoadLevel.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/model/receivers/load/LoadObjectLevel.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/model/receivers/load/LoadTextLevel.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/model/receivers/load/LoadXMLLevel.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/model/receivers/move/Direction.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/model/receivers/move/Move.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/model/receivers/save/SaveLevel.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/model/receivers/save/SaveToObjFile.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/model/receivers/save/SaveToXMLFile.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/view/GUIDisplayer.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/view/MainWindow.fxml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/view/MyView.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/view/Run.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/view/View.java" />
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="v1.1">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/sokoban_gui/controller/Controller$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/controller/Controller.java" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/sokoban_gui/controller/Controller.class" afterPath="$PROJECT_DIR$/out/production/sokoban_gui/controller/Controller.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/sokoban_gui/controller/SokobanController.class" afterPath="$PROJECT_DIR$/out/production/sokoban_gui/controller/SokobanController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/sokoban_gui/controller/commands/ExitCommand.class" afterPath="$PROJECT_DIR$/out/production/sokoban_gui/controller/commands/ExitCommand.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/sokoban_gui/controller/commands/MoveCommand.class" afterPath="$PROJECT_DIR$/out/production/sokoban_gui/controller/commands/MoveCommand.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/sokoban_gui/controller/commands/SaveCommand.class" afterPath="$PROJECT_DIR$/out/production/sokoban_gui/controller/commands/SaveCommand.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/sokoban_gui/view/MyView$1.class" afterPath="$PROJECT_DIR$/out/production/sokoban_gui/view/MyView$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/sokoban_gui/view/MyView.class" afterPath="$PROJECT_DIR$/out/production/sokoban_gui/view/MyView.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/sokoban_gui/view/Run.class" afterPath="$PROJECT_DIR$/out/production/sokoban_gui/view/Run.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/sokoban_gui/view/MainWindow.fxml" afterPath="$PROJECT_DIR$/out/production/sokoban_gui/view/MainWindow.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/controller/SokobanController.java" afterPath="$PROJECT_DIR$/src/controller/SokobanController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/controller/commands/Command.java" afterPath="$PROJECT_DIR$/src/controller/commands/Command.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/controller/commands/DisplayCommand.java" afterPath="$PROJECT_DIR$/src/controller/commands/DisplayCommand.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/controller/commands/ExitCommand.java" afterPath="$PROJECT_DIR$/src/controller/commands/ExitCommand.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/controller/commands/MoveCommand.java" afterPath="$PROJECT_DIR$/src/controller/commands/MoveCommand.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/controller/commands/SaveCommand.java" afterPath="$PROJECT_DIR$/src/controller/commands/SaveCommand.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/Model.java" afterPath="$PROJECT_DIR$/src/model/Model.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/MyModel.java" afterPath="$PROJECT_DIR$/src/model/MyModel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/data/level/Level.java" afterPath="$PROJECT_DIR$/src/model/data/level/Level.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/policy/MySokobanPolicy.java" afterPath="$PROJECT_DIR$/src/model/policy/MySokobanPolicy.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/policy/Policy.java" afterPath="$PROJECT_DIR$/src/model/policy/Policy.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/receivers/display/Displayer.java" afterPath="$PROJECT_DIR$/src/model/receivers/display/Displayer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/view/GUIDisplayer.java" afterPath="$PROJECT_DIR$/src/view/GUIDisplayer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/view/MainWindow.fxml" afterPath="$PROJECT_DIR$/src/view/MainWindow.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/view/MyView.java" afterPath="$PROJECT_DIR$/src/view/MyView.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/view/Run.java" afterPath="$PROJECT_DIR$/src/view/Run.java" />
     </list>
+    <list id="14a69492-4d72-4884-a0d1-7c9632f8f3c1" name="Rejected commit: Default" comment="v1.0" />
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
-    <file path="$PROJECT_DIR$/bin/view/MainWindow.fxml" ignored="false" />
-    <file path="$PROJECT_DIR$/src/view/MainWindow.fxml" ignored="true" />
-    <file path="$PROJECT_DIR$/src/view/GUIDisplayer.java" ignored="false" />
-    <file path="$PROJECT_DIR$/src/view/MyView.java" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -181,11 +97,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="GUIDisplayer.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="GUIDisplayer.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/view/GUIDisplayer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="16">
-              <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+            <state relative-caret-position="144">
+              <caret line="83" column="29" lean-forward="false" selection-start-line="83" selection-start-column="29" selection-end-line="83" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -193,22 +109,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ArrayList.java" pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk1.8.0_112/src.zip!/java/util/ArrayList.java">
+      <file leaf-file-name="MySokobanPolicy.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/model/policy/MySokobanPolicy.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="9840">
-              <caret line="652" column="0" lean-forward="false" selection-start-line="652" selection-start-column="0" selection-end-line="652" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Run.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/view/Run.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="400">
-              <caret line="33" column="5" lean-forward="false" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
-              <folding />
+            <state relative-caret-position="272">
+              <caret line="83" column="16" lean-forward="true" selection-start-line="83" selection-start-column="16" selection-end-line="83" selection-end-column="16" />
+              <folding>
+                <element signature="method#push#0;class#MySokobanPolicy#0" expanded="false" />
+                <element signature="method#checkIfNeedPush#0;class#MySokobanPolicy#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -219,8 +128,18 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
-              <caret line="20" column="20" lean-forward="false" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="20" />
+            <state relative-caret-position="142">
+              <caret line="9" column="8" lean-forward="false" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MoveCommand.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/controller/commands/MoveCommand.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="144">
+              <caret line="20" column="48" lean-forward="false" selection-start-line="20" selection-start-column="48" selection-end-line="20" selection-end-column="48" />
               <folding />
             </state>
           </provider>
@@ -229,39 +148,25 @@
       <file leaf-file-name="MyView.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/view/MyView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="21" column="4" lean-forward="false" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
+            <state relative-caret-position="144">
+              <caret line="27" column="31" lean-forward="false" selection-start-line="27" selection-start-column="31" selection-end-line="27" selection-end-column="31" />
               <folding>
-                <element signature="e#1244#1245#0" expanded="true" />
-                <element signature="e#1272#1273#0" expanded="true" />
-                <element signature="e#1779#1780#0" expanded="true" />
-                <element signature="e#1810#1811#0" expanded="true" />
+                <element signature="method#displayLevel#0;class#MyView#0" expanded="false" />
+                <element signature="method#loadLevel#0;class#MyView#0" expanded="false" />
+                <element signature="method#saveLevel#0;class#MyView#0" expanded="false" />
+                <element signature="method#exit#0;class#MyView#0" expanded="false" />
+                <element signature="method#passException#0;class#MyView#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MainWindow.fxml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bin/view/MainWindow.fxml">
-          <provider editor-type-id="JavaFX-Scene-Builder">
-            <state />
-          </provider>
+      <file leaf-file-name="ExitCommand.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/controller/commands/ExitCommand.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="496">
-              <caret line="31" column="16" lean-forward="false" selection-start-line="31" selection-start-column="16" selection-end-line="31" selection-end-column="16" />
+            <state relative-caret-position="336">
+              <caret line="25" column="1" lean-forward="true" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MyModel.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/model/MyModel.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="704">
-              <caret line="50" column="0" lean-forward="false" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
-              <folding>
-                <element signature="e#1035#1036#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -269,8 +174,8 @@
       <file leaf-file-name="DisplayCommand.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/controller/commands/DisplayCommand.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="224">
-              <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+            <state relative-caret-position="96">
+              <caret line="7" column="19" lean-forward="false" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -279,10 +184,10 @@
       <file leaf-file-name="SokobanController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/controller/SokobanController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="368">
-              <caret line="35" column="18" lean-forward="false" selection-start-line="35" selection-start-column="18" selection-end-line="35" selection-end-column="18" />
+            <state relative-caret-position="192">
+              <caret line="117" column="11" lean-forward="false" selection-start-line="117" selection-start-column="11" selection-end-line="117" selection-end-column="11" />
               <folding>
-                <element signature="method#exceptionHandler#0;class#SokobanController#0" expanded="false" />
+                <element signature="e#670#686#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -291,18 +196,38 @@
       <file leaf-file-name="Level.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/model/data/level/Level.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1312">
-              <caret line="107" column="0" lean-forward="false" selection-start-line="107" selection-start-column="0" selection-end-line="107" selection-end-column="0" />
+            <state relative-caret-position="144">
+              <caret line="107" column="4" lean-forward="false" selection-start-line="107" selection-start-column="4" selection-end-line="107" selection-end-column="4" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="method#getPlayer#0;class#Level#0" expanded="false" />
+                <element signature="method#setSolutionCoordinates#0;class#Level#0" expanded="false" />
+                <element signature="method#checkIfWin#0;class#Level#0" expanded="false" />
                 <element signature="method#getAdjacent#0;class#Level#0" expanded="false" />
-                <element signature="method#findWidthHeight#0;class#Level#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SaveCommand.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/controller/commands/SaveCommand.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="144">
+              <caret line="15" column="15" lean-forward="false" selection-start-line="15" selection-start-column="15" selection-end-line="15" selection-end-column="15" />
+              <folding>
+                <element signature="e#344#362#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+      </list>
+    </option>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -320,17 +245,29 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/view/Run.java" />
         <option value="$PROJECT_DIR$/src/model/data/level/MyObjectLevelLoader.java" />
         <option value="$PROJECT_DIR$/src/view/SokobanDisplayer.java" />
         <option value="$PROJECT_DIR$/src/model/receivers/display/GUIDisplayer.java" />
         <option value="$PROJECT_DIR$/src/model/data/level/MyTextLevelLoader.java" />
-        <option value="$PROJECT_DIR$/src/model/data/level/Level.java" />
         <option value="$PROJECT_DIR$/src/model/receivers/display/GUIDisplayer2.java" />
-        <option value="$PROJECT_DIR$/src/view/MainWindow.fxml" />
-        <option value="$PROJECT_DIR$/src/controller/SokobanController.java" />
-        <option value="$PROJECT_DIR$/src/view/MyView.java" />
         <option value="$PROJECT_DIR$/bin/view/MainWindow.fxml" />
+        <option value="$PROJECT_DIR$/src/view/MainWindow.fxml" />
+        <option value="$PROJECT_DIR$/src/controller/Controller.java" />
+        <option value="$PROJECT_DIR$/src/controller/server/Controller.java" />
+        <option value="$PROJECT_DIR$/src/view/Run.java" />
+        <option value="$PROJECT_DIR$/src/model/MyModel.java" />
+        <option value="$PROJECT_DIR$/src/model/policy/MySokobanPolicy.java" />
+        <option value="$PROJECT_DIR$/src/view/MyView.java" />
+        <option value="$PROJECT_DIR$/src/model/policy/Policy.java" />
+        <option value="$PROJECT_DIR$/src/controller/commands/Command.java" />
+        <option value="$PROJECT_DIR$/src/model/receivers/display/Displayer.java" />
+        <option value="$PROJECT_DIR$/src/model/Model.java" />
+        <option value="$PROJECT_DIR$/src/controller/commands/DisplayCommand.java" />
+        <option value="$PROJECT_DIR$/src/controller/commands/ExitCommand.java" />
+        <option value="$PROJECT_DIR$/src/controller/commands/SaveCommand.java" />
+        <option value="$PROJECT_DIR$/src/controller/commands/MoveCommand.java" />
+        <option value="$PROJECT_DIR$/src/model/data/level/Level.java" />
+        <option value="$PROJECT_DIR$/src/controller/SokobanController.java" />
         <option value="$PROJECT_DIR$/src/view/GUIDisplayer.java" />
       </list>
     </option>
@@ -342,7 +279,9 @@
     <option name="width" value="1382" />
     <option name="height" value="744" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectReloadState">
     <option name="STATE" value="0" />
   </component>
@@ -387,10 +326,6 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="view" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -424,7 +359,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="controller" />
+              <option name="myItemId" value="model" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="policy" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -439,6 +378,14 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="model" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="data" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -459,31 +406,11 @@
     <property name="GoToClass.includeLibraries" value="false" />
     <property name="dynamic.classpath" value="false" />
     <property name="MemberChooser.copyJavadoc" value="false" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.General" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="ChangesBrowser.SHOW_FLATTEN" value="false" />
   </component>
   <component name="RunManager" selected="Application.Run">
-    <configuration default="false" name="Run" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="view.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="view.Run" />
-      <option name="VM_PARAMETERS" value="" />
-      <option name="PROGRAM_PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="sokoban_gui" />
-      <envs />
-      <method />
-    </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m" />
@@ -711,15 +638,30 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
+    <configuration default="false" name="Run" type="Application" factoryName="Application" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="view.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="view.Run" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="sokoban_gui" />
+      <envs />
+      <method />
+    </configuration>
     <list size="2">
       <item index="0" class="java.lang.String" itemvalue="Application.Main" />
       <item index="1" class="java.lang.String" itemvalue="Application.Run" />
     </list>
-    <recent_temporary>
-      <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="Application.Run" />
-      </list>
-    </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
       <Host>localhost</Host>
       <Port>5050</Port>
@@ -752,23 +694,24 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23501578" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26340693" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3548896" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19033675" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19033675" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -783,7 +726,6 @@
       <window_info id="Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23501578" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329429" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -796,11 +738,12 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="v1.0" />
-    <option name="LAST_COMMIT_MESSAGE" value="v1.0" />
+    <MESSAGE value="v1.1" />
+    <option name="LAST_COMMIT_MESSAGE" value="v1.1" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="16" />
+      <option name="time" value="27" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -809,282 +752,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/view/Run.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="33" column="5" lean-forward="false" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/MainWindow.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="20" column="20" lean-forward="false" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/MyView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="21" column="4" lean-forward="false" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
-          <folding>
-            <element signature="e#1244#1245#0" expanded="true" />
-            <element signature="e#1272#1273#0" expanded="true" />
-            <element signature="e#1779#1780#0" expanded="true" />
-            <element signature="e#1810#1811#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/view/MainWindow.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="496">
-          <caret line="31" column="16" lean-forward="false" selection-start-line="31" selection-start-column="16" selection-end-line="31" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/MyModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="800">
-          <caret line="50" column="0" lean-forward="false" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
-          <folding>
-            <element signature="e#1035#1036#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/commands/DisplayCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/SokobanController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="560">
-          <caret line="35" column="18" lean-forward="false" selection-start-line="35" selection-start-column="18" selection-end-line="35" selection-end-column="18" />
-          <folding>
-            <element signature="method#exceptionHandler#0;class#SokobanController#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/data/level/Level.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1712">
-          <caret line="107" column="0" lean-forward="false" selection-start-line="107" selection-start-column="0" selection-end-line="107" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#getAdjacent#0;class#Level#0" expanded="false" />
-            <element signature="method#findWidthHeight#0;class#Level#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/GUIDisplayer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_112/src.zip!/java/util/ArrayList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="10432">
-          <caret line="652" column="0" lean-forward="false" selection-start-line="652" selection-start-column="0" selection-end-line="652" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/Run.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="33" column="5" lean-forward="true" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/MainWindow.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="20" column="20" lean-forward="true" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/MyView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="21" column="4" lean-forward="true" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
-          <folding>
-            <element signature="e#1244#1245#0" expanded="true" />
-            <element signature="e#1272#1273#0" expanded="true" />
-            <element signature="e#1779#1780#0" expanded="true" />
-            <element signature="e#1810#1811#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/view/MainWindow.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="496">
-          <caret line="31" column="16" lean-forward="true" selection-start-line="31" selection-start-column="16" selection-end-line="31" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/MyModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="704">
-          <caret line="50" column="0" lean-forward="false" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
-          <folding>
-            <element signature="e#1035#1036#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/commands/DisplayCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/SokobanController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="35" column="18" lean-forward="false" selection-start-line="35" selection-start-column="18" selection-end-line="35" selection-end-column="18" />
-          <folding>
-            <element signature="method#exceptionHandler#0;class#SokobanController#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/data/level/Level.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1312">
-          <caret line="107" column="0" lean-forward="false" selection-start-line="107" selection-start-column="0" selection-end-line="107" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#getAdjacent#0;class#Level#0" expanded="false" />
-            <element signature="method#findWidthHeight#0;class#Level#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/GUIDisplayer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="17" column="26" lean-forward="false" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/MainWindow.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="36" column="94" lean-forward="false" selection-start-line="36" selection-start-column="94" selection-end-line="36" selection-end-column="94" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/MyView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="4" lean-forward="false" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
-          <folding>
-            <element signature="e#1244#1245#0" expanded="true" />
-            <element signature="e#1272#1273#0" expanded="true" />
-            <element signature="e#1779#1780#0" expanded="true" />
-            <element signature="e#1810#1811#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/data/level/MyObjectLevelLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/MyModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="24" column="9" lean-forward="true" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
-          <folding>
-            <element signature="e#1035#1036#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/commands/DisplayCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/receivers/display/GUIDisplayer2.java" />
-    <entry file="file://$PROJECT_DIR$/src/model/data/level/Level.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1513">
-          <caret line="111" column="0" lean-forward="true" selection-start-line="111" selection-start-column="0" selection-end-line="111" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#getAdjacent#0;class#Level#0" expanded="false" />
-            <element signature="method#findWidthHeight#0;class#Level#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/commands/LoadCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="41" column="30" lean-forward="true" selection-start-line="41" selection-start-column="30" selection-end-line="41" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="21" column="17" lean-forward="true" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Main.java" />
-    <entry file="file://$PROJECT_DIR$/src/sample/Controller.java" />
-    <entry file="file://$PROJECT_DIR$/src/sample/sample.fxml" />
     <entry file="file://$PROJECT_DIR$/src/sample/Main.java" />
     <entry file="file://$PROJECT_DIR$/src/sample/sample.fxml" />
     <entry file="file://$PROJECT_DIR$/src/sample/Controller.java" />
@@ -1095,27 +762,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/commands/LoadCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="41" column="30" lean-forward="false" selection-start-line="41" selection-start-column="30" selection-end-line="41" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/model/data/level/MyObjectLevelLoader.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="21" column="17" lean-forward="false" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1133,59 +783,60 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/data/level/Level.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1312">
-          <caret line="107" column="0" lean-forward="false" selection-start-line="107" selection-start-column="0" selection-end-line="107" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#getAdjacent#0;class#Level#0" expanded="false" />
-            <element signature="method#findWidthHeight#0;class#Level#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/model/receivers/display/GUIDisplayer2.java" />
-    <entry file="file://$PROJECT_DIR$/src/model/MyModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="704">
-          <caret line="50" column="0" lean-forward="false" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
-          <folding>
-            <element signature="e#1035#1036#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/commands/DisplayCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_112/src.zip!/java/util/ArrayList.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="9840">
           <caret line="652" column="0" lean-forward="false" selection-start-line="652" selection-start-column="0" selection-end-line="652" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/Run.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="33" column="5" lean-forward="false" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/SokobanController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="35" column="18" lean-forward="false" selection-start-line="35" selection-start-column="18" selection-end-line="35" selection-end-column="18" />
           <folding>
-            <element signature="method#exceptionHandler#0;class#SokobanController#0" expanded="false" />
+            <element signature="e#0#54151#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#6252#6253#0" expanded="false" />
+            <element signature="e#6320#6321#0" expanded="false" />
+            <element signature="e#10189#10190#0" expanded="false" />
+            <element signature="e#10216#10217#0" expanded="false" />
+            <element signature="e#10398#10399#0" expanded="false" />
+            <element signature="e#10430#10431#0" expanded="false" />
+            <element signature="e#10907#10908#0" expanded="false" />
+            <element signature="e#10945#10946#0" expanded="false" />
+            <element signature="e#13541#13542#0" expanded="false" />
+            <element signature="e#13596#13597#0" expanded="false" />
+            <element signature="e#15414#15415#0" expanded="false" />
+            <element signature="e#15459#15460#0" expanded="false" />
+            <element signature="e#24549#24550#0" expanded="false" />
+            <element signature="e#24603#24604#0" expanded="false" />
+            <element signature="e#30347#30348#0" expanded="false" />
+            <element signature="e#30384#30385#0" expanded="false" />
+            <element signature="e#30684#30685#0" expanded="false" />
+            <element signature="e#30716#30717#0" expanded="false" />
+            <element signature="e#31041#31042#0" expanded="false" />
+            <element signature="e#31086#31087#0" expanded="false" />
+            <element signature="e#33262#33263#0" expanded="false" />
+            <element signature="e#33304#33305#0" expanded="false" />
+            <element signature="e#33338#33339#0" expanded="false" />
+            <element signature="e#33375#33376#0" expanded="false" />
+            <element signature="e#33413#33414#0" expanded="false" />
+            <element signature="e#33454#33455#0" expanded="false" />
+            <element signature="e#38943#38944#0" expanded="false" />
+            <element signature="e#38994#38995#0" expanded="false" />
+            <element signature="e#39436#39437#0" expanded="false" />
+            <element signature="e#39481#39482#0" expanded="false" />
+            <element signature="e#39886#39887#0" expanded="false" />
+            <element signature="e#39960#39961#0" expanded="false" />
+            <element signature="e#40600#40601#0" expanded="false" />
+            <element signature="e#40658#40659#0" expanded="false" />
+            <element signature="e#42227#42228#0" expanded="false" />
+            <element signature="e#42280#42281#0" expanded="false" />
+            <element signature="e#42326#42327#0" expanded="false" />
+            <element signature="e#42383#42384#0" expanded="false" />
+            <element signature="e#44775#44776#0" expanded="false" />
+            <element signature="e#44842#44843#0" expanded="false" />
+            <element signature="e#46390#46391#0" expanded="false" />
+            <element signature="e#46455#46456#0" expanded="false" />
+            <element signature="e#51499#51500#0" expanded="false" />
+            <element signature="e#51557#51558#0" expanded="false" />
+            <element signature="e#51597#51598#0" expanded="false" />
+            <element signature="e#51690#51691#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1201,36 +852,369 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="32">
+          <caret line="2" column="17" lean-forward="false" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/receivers/move/Move.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-368">
+          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_112/javafx-src.zip!/javafx/css/PseudoClass.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="85" column="0" lean-forward="false" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_112/javafx-src.zip!/javafx/scene/control/Alert.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="244" column="0" lean-forward="false" selection-start-line="244" selection-start-column="0" selection-end-line="244" selection-end-column="0" />
+          <folding>
+            <element signature="e#8634#8635#0" expanded="false" />
+            <element signature="e#8669#8670#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_112/src.zip!/java/lang/Object.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_112/javafx-src.zip!/javafx/beans/binding/ObjectExpression.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_112/javafx-src.zip!/javafx/beans/property/ReadOnlyObjectProperty.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="55" column="0" lean-forward="false" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_112/javafx-src.zip!/javafx/beans/property/ObjectProperty.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="60" column="0" lean-forward="false" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_112/javafx-src.zip!/javafx/beans/property/ObjectPropertyBase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_112/javafx-src.zip!/javafx/beans/property/SimpleObjectProperty.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="67" column="0" lean-forward="false" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
+          <folding>
+            <element signature="e#1044#1045#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_112/javafx-src.zip!/javafx/beans/property/ReadOnlyObjectWrapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_112/javafx-src.zip!/javafx/scene/Node.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="87">
+          <caret line="801" column="0" lean-forward="false" selection-start-line="801" selection-start-column="0" selection-end-line="801" selection-end-column="0" />
+          <folding>
+            <element signature="e#35131#35138#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_112/javafx-src.zip!/javafx/scene/Parent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="97" column="0" lean-forward="false" selection-start-line="97" selection-start-column="0" selection-end-line="97" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_112/javafx-src.zip!/javafx/scene/layout/Region.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="436" column="0" lean-forward="false" selection-start-line="436" selection-start-column="0" selection-end-line="436" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_112/javafx-src.zip!/javafx/scene/layout/Pane.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="124" column="0" lean-forward="false" selection-start-line="124" selection-start-column="0" selection-end-line="124" selection-end-column="0" />
+          <folding>
+            <element signature="e#3912#3913#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_112/javafx-src.zip!/javafx/scene/control/DialogPane.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="188" column="0" lean-forward="false" selection-start-line="188" selection-start-column="0" selection-end-line="188" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_112/javafx-src.zip!/javafx/scene/control/Dialog.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="279">
+          <caret line="506" column="34" lean-forward="false" selection-start-line="506" selection-start-column="34" selection-end-line="506" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/view/View.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="32">
+          <caret line="2" column="17" lean-forward="false" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/view/Run.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="33" column="40" lean-forward="true" selection-start-line="33" selection-start-column="40" selection-end-line="33" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_112/javafx-src.zip!/javafx/fxml/FXMLLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="1657" column="0" lean-forward="false" selection-start-line="1657" selection-start-column="0" selection-end-line="1657" selection-end-column="0" />
+          <folding>
+            <element signature="e#66921#66922#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_112/javafx-src.zip!/javafx/scene/control/MenuItem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="462" column="0" lean-forward="false" selection-start-line="462" selection-start-column="0" selection-end-line="462" selection-end-column="0" />
+          <folding>
+            <element signature="e#15741#15742#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_112/javafx-src.zip!/javafx/event/Event.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="198" column="0" lean-forward="false" selection-start-line="198" selection-start-column="0" selection-end-line="198" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_112/javafx-src.zip!/javafx/scene/Scene.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="2494" column="0" lean-forward="false" selection-start-line="2494" selection-start-column="0" selection-end-line="2494" selection-end-column="0" />
+          <folding>
+            <element signature="e#66617#66618#0" expanded="true" />
+            <element signature="e#66663#66664#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/commands/LoadCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="199">
+          <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/Controller2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="608">
+          <caret line="38" column="6" lean-forward="false" selection-start-line="38" selection-start-column="6" selection-end-line="38" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/MyModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="129">
+          <caret line="16" column="33" lean-forward="true" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/receivers/display/CLIDisplayer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="28" column="26" lean-forward="false" selection-start-line="28" selection-start-column="26" selection-end-line="28" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/policy/Policy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="6" column="4" lean-forward="false" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/commands/Command.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="7" column="4" lean-forward="false" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/receivers/display/Displayer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="7" column="4" lean-forward="false" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/Model.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/commands/ExitCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="25" column="1" lean-forward="true" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/commands/DisplayCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="7" column="19" lean-forward="false" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/commands/SaveCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="15" column="15" lean-forward="false" selection-start-line="15" selection-start-column="15" selection-end-line="15" selection-end-column="15" />
+          <folding>
+            <element signature="e#344#362#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/view/MainWindow.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder">
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="20" column="20" lean-forward="false" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="20" />
+        <state relative-caret-position="142">
+          <caret line="9" column="8" lean-forward="false" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/commands/MoveCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="20" column="48" lean-forward="false" selection-start-line="20" selection-start-column="48" selection-end-line="20" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/data/level/Level.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="107" column="4" lean-forward="false" selection-start-line="107" selection-start-column="4" selection-end-line="107" selection-end-column="4" />
+          <folding>
+            <element signature="method#getPlayer#0;class#Level#0" expanded="false" />
+            <element signature="method#setSolutionCoordinates#0;class#Level#0" expanded="false" />
+            <element signature="method#checkIfWin#0;class#Level#0" expanded="false" />
+            <element signature="method#getAdjacent#0;class#Level#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/view/MyView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="21" column="4" lean-forward="false" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
+        <state relative-caret-position="144">
+          <caret line="27" column="31" lean-forward="false" selection-start-line="27" selection-start-column="31" selection-end-line="27" selection-end-column="31" />
           <folding>
-            <element signature="e#1244#1245#0" expanded="true" />
-            <element signature="e#1272#1273#0" expanded="true" />
-            <element signature="e#1779#1780#0" expanded="true" />
-            <element signature="e#1810#1811#0" expanded="true" />
+            <element signature="method#displayLevel#0;class#MyView#0" expanded="false" />
+            <element signature="method#loadLevel#0;class#MyView#0" expanded="false" />
+            <element signature="method#saveLevel#0;class#MyView#0" expanded="false" />
+            <element signature="method#exit#0;class#MyView#0" expanded="false" />
+            <element signature="method#passException#0;class#MyView#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/SokobanController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="117" column="11" lean-forward="false" selection-start-line="117" selection-start-column="11" selection-end-line="117" selection-end-column="11" />
+          <folding>
+            <element signature="e#670#686#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/view/GUIDisplayer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="16">
-          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+        <state relative-caret-position="144">
+          <caret line="83" column="29" lean-forward="false" selection-start-line="83" selection-start-column="29" selection-end-line="83" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/policy/MySokobanPolicy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="83" column="16" lean-forward="true" selection-start-line="83" selection-start-column="16" selection-end-line="83" selection-end-column="16" />
+          <folding>
+            <element signature="method#push#0;class#MySokobanPolicy#0" expanded="false" />
+            <element signature="method#checkIfNeedPush#0;class#MySokobanPolicy#0" expanded="false" />
           </folding>
         </state>
       </provider>

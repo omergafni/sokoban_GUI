@@ -14,7 +14,7 @@ import java.util.List;
 public class Level implements Serializable {
 
 	private ArrayList<ArrayList<WorldObject>> grid;
-	private ArrayList<Point> solutionCoordinates = new ArrayList<Point>();
+	private ArrayList<Point> solutionCoordinates = new ArrayList<>();
 	private Player player = null;
 	private int maxHeight;
 	private int maxWidth;
@@ -29,11 +29,11 @@ public class Level implements Serializable {
 			findWidthHeight();
 			findSolCoordinates();	
 		}
-		catch (Exception s) { System.out.println(s); }
+		catch (Exception s) { System.out.println(s.getMessage()); }
 	}
 	
 	// Finding all TARGETs coordinates
-	public void findSolCoordinates() {
+	private void findSolCoordinates() {
 		for(int i = 0; i < grid.size(); i++) 
 			for(int j = 0; j < grid.get(i).size(); j++) {
 				WorldObject w = grid.get(i).get(j);
@@ -41,8 +41,7 @@ public class Level implements Serializable {
 			}
 	}
 	
-	public Player getPlayer()
-	{
+	public Player getPlayer() {
 		if (player != null)
 		{
 			return player;
@@ -58,7 +57,7 @@ public class Level implements Serializable {
 		return null;
 	}
 	
-	public void setPlayer(Player player) {this.player = player;}
+	private void setPlayer(Player player) {this.player = player;}
 	
 	public final ArrayList<ArrayList<WorldObject>> getGrid() {return grid;}
 	
@@ -70,6 +69,18 @@ public class Level implements Serializable {
 		this.solutionCoordinates = solutionCoordinates;
 	}
 	
+	public boolean checkIfWin() {
+
+		for(Point p : solutionCoordinates) {
+			int x = (int)p.getX();
+			int y = (int)p.getY();
+			if(grid.get(x).get(y).getWorldObjectType() != WorldObjectType.BOX) {
+				return false;
+			}
+		}
+		return true;
+	}
+
 	public WorldObject getWorldObject(Point position) {
 		return grid.get((int)position.getX()).get((int)position.getY());
 	}
@@ -94,7 +105,7 @@ public class Level implements Serializable {
 		} 
 	}
 
-	public void findWidthHeight() {
+	private void findWidthHeight() {
 		maxHeight = grid.size();
 		maxWidth = 0;
 		for(int i = 0; i<grid.size(); i++) {

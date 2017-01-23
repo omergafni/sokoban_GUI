@@ -4,5 +4,5 @@ import model.receivers.move.Move;
 
 public interface Policy {
 
-	public void execute(Move moveCommand);
+	void execute(Move moveCommand) throws Exception;
 }

@@ -5,8 +5,8 @@ import model.receivers.display.Displayer;
 
 public class DisplayCommand implements Command {
 	
-	Displayer displayer;
-	Model model;
+	private Displayer displayer;
+	private Model model;
 	
 	public DisplayCommand(Model model, Displayer displayer) { 
 		this.model = model;
@@ -14,8 +14,8 @@ public class DisplayCommand implements Command {
 	}
 
 	@Override
-	public void execute() {
-		System.out.println("display command excecuted");
+	public void execute() throws Exception {
+		System.out.println("display command executed");
 		displayer.setLevel(model.getLevel());
 		displayer.display();
 	}

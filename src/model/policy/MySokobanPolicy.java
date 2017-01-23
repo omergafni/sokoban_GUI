@@ -17,7 +17,7 @@ public class MySokobanPolicy implements Policy {
 	public MySokobanPolicy(Level level) { this.level = level; this.player = level.getPlayer(); }
 	
 	@Override
-	public void execute(Move moveCommand) {
+	public void execute(Move moveCommand) throws Exception {
 		
 		this.direction = moveCommand.getDirection();
 		
@@ -33,6 +33,7 @@ public class MySokobanPolicy implements Policy {
 				moveCommand.move();
 			}
 		}
+
 	}
 	
 	private void push(Box box, Direction direction) {

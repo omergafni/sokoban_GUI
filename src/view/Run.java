@@ -26,9 +26,12 @@ public class Run extends Application {
 
 			sokoView.addObserver(sokoController);
 			sokoModel.addObserver(sokoController);
-			sokoController.getController().start();
-			
-			primaryStage.setScene(new Scene(root,400,400));
+			sokoController.start();
+
+			//primaryStage.setFocused(true);
+			primaryStage.setOnCloseRequest(event -> sokoView.exit());
+
+			primaryStage.setScene(new Scene(root,600,600));
 			primaryStage.show();
 			
 	}
@@ -47,13 +50,10 @@ public class Run extends Application {
 				sokoModel.addObserver(sokoController);
 
 			} 
-		} 
-		
+		}
 		else if (args.length == 0) launch(args);
-			
-		
-		
-		
-		
+		else System.out.println("to run the game with server: provide '-server' flag and a port"+
+								"to run the game in GUI mode use no arguments at all");
+
 	}
 }

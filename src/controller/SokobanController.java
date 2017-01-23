@@ -3,6 +3,7 @@ package controller;
 import controller.commands.*;
 import controller.server.MyServer;
 import model.Model;
+import model.MyModel;
 import model.receivers.display.CLIDisplayer;
 import view.MyView;
 import view.View;
@@ -13,51 +14,56 @@ import java.io.PrintWriter;
 import java.util.HashMap;
 import java.util.Observable;
 import java.util.Observer;
+import java.util.concurrent.ArrayBlockingQueue;
+import java.util.concurrent.BlockingQueue;
 
-public class SokobanController implements Observer {
+public class SokobanController implements Controller, Observer {
 
-	private Model myModel;
-	private View myView;
-	private Controller myController;
+	private MyModel myModel;
+	private MyView myView;
 	private MyServer myServer;
 	private HashMap<String,Command> commands = new HashMap<String,Command>();
-	//charGrid is using to pass level data from myModel to myView
-	//private ArrayList<ArrayList<Character>> charGrid = new ArrayList<ArrayList<Character>>();
+	private BlockingQueue<Command> myQueue = new ArrayBlockingQueue<Command>(128);
+	private boolean isRunning = true;
 
 	
 	public SokobanController(Model model, View view) {
-		this.myModel = model;
-		this.myView = view;
-		this.myController = new Controller();
+		this.myModel = (MyModel)model;
+		this.myView = (MyView)view;
 		this.myServer = null;
 		commands.put("load", new LoadCommand(myModel));
 		commands.put("save", new SaveCommand(myModel));
 		commands.put("move", new MoveCommand(myModel));
-		commands.put("exit", new ExitCommand(myController));
-		commands.put("display", new DisplayCommand(model,((MyView)myView).getGUIDisplayer()));
+		commands.put("exit", new ExitCommand(this/*myController*/));
+		commands.put("display", new DisplayCommand(model,myView.getGUIDisplayer()));
+		start();
 	}
 	
 	public SokobanController(Model model, MyServer server) {
-		this.myModel = model;
+		this.myModel = (MyModel)model;
 		this.myView = null;
-		this.myController = new Controller();
 		this.myServer = server;
 		myServer.start();
-		myController.start();
 		commands.put("load", new LoadCommand(myModel));
 		commands.put("save", new SaveCommand(myModel));
 		commands.put("move", new MoveCommand(myModel));
-		commands.put("exit", new ExitCommand(myController));
+		commands.put("exit", new ExitCommand(this));
 		commands.put("display", new DisplayCommand(myModel,new CLIDisplayer(myServer)));
+		start();
 	}
 	
 	
 	@Override
 	public void update(Observable o, Object arg) {
 		try {
-			    myController.insertCommand(commandProcessor((String)arg));
-
-        } catch(IOException e) { exceptionHandler(e,myServer.getCH().getOutputStream()); }
+				insertCommand(commandProcessor((String)arg));
+        } catch(IOException e)
+		  {
+			if(myServer != null)
+		  		exceptionHandler(e,myServer.getCH().getOutputStream());
+			else
+				myView.passException(e);
+		  }
 	}
 	
 	public Command commandProcessor(String input) throws IOException{
@@ -70,21 +76,51 @@ public class SokobanController implements Observer {
 		c.setParams(params);
 		return c;
 	}
-	
+
+	@Override
+	public void start() {
+		new Thread(new Runnable() {
+			@Override
+			public void run() {
+				while (isRunning) {
+					try {
+						myQueue.take().execute();
+					} catch (Exception e)
+					{
+						if(myServer != null)
+							exceptionHandler(e,myServer.getCH().getOutputStream());
+						else
+							myView.passException(e);
+					}
+				}
+				System.out.println("controller thread is close");
+			}
+		}
+		).start();
+	}
+
+	@Override
+	public void stop() { this.isRunning = false; }
+
+	public void insertCommand(Command command) {
+		try
+		{
+			if (command != null)
+				myQueue.put(command);
+		}
+		catch (InterruptedException e) { e.printStackTrace(); }
+	}
+
 	public MyServer getServer() {return myServer;}
 
 	public void setServer(MyServer server) {this.myServer = server;}
 
-	public Controller getController() {return this.myController;}
-	
-	public void exceptionHandler(IOException e, OutputStream out) {
+	private void exceptionHandler(Exception e, OutputStream out) {
 		PrintWriter writer = new PrintWriter(out);
 		writer.println(e.getMessage());
 		writer.flush();
 	}
-	
-	
-	
+
 	
 }
 

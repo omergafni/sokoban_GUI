@@ -13,7 +13,7 @@ public class SaveCommand implements Command {
 	private HashMap<String,SaveLevel> levelSaverFactory = new HashMap<String,SaveLevel>();
 	private String path = null;
 	private String type = null;
-	Model model = null;
+	private Model model = null;
 	
 	public SaveCommand(Model model) {
 		this.model = model;
@@ -35,6 +35,7 @@ public class SaveCommand implements Command {
 		}
 		levelSaverFactory.get(type).save(model.getLevel(), path);	
 		System.out.println("save completed!");
+		throw new IOException("save completed!\n");
 	}
 
 }

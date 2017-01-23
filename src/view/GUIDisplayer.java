@@ -32,7 +32,7 @@ public class GUIDisplayer extends Canvas implements Displayer
 	}
 
 
-	public void redraw() {
+	private void redraw() throws Exception {
 		if(level == null)
 			return;
 		double displayerHeight = this.getHeight();
@@ -81,11 +81,13 @@ public class GUIDisplayer extends Canvas implements Displayer
 
 			}
 		}
-		
+		if(level.checkIfWin()) {
+			throw new Exception("You won! good job..");
+		}
 	}
 
 	@Override
-	public void display() {
+	public void display() throws Exception{
 		redraw();
 	}
 

@@ -4,8 +4,7 @@ import model.data.level.Level;
 
 public interface Displayer {
 
-	public void display();
-
-	public void setLevel(Level level);
+	void display() throws Exception;
+	void setLevel(Level level);
 	
 }

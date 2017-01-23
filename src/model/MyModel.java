@@ -18,7 +18,7 @@ public class MyModel extends Observable implements Model {
 	private Policy policy = null;
 
 	@Override
-	public void move(Direction direction) {
+	public void move(Direction direction) throws Exception {
 		if (level == null){
 			//System.out.println("there is no level loaded");
 			return;
