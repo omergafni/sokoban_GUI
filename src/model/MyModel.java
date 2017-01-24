@@ -16,6 +16,7 @@ public class MyModel extends Observable implements Model {
 	private Move moveRight = null;
 	private Move moveLeft = null;
 	private Policy policy = null;
+	private String currentLevelPath= null;
 
 	@Override
 	public void move(Direction direction) throws Exception {
@@ -47,14 +48,12 @@ public class MyModel extends Observable implements Model {
 	}
 
 	@Override
-	public Level getLevel() {
-		return level;
-	}
-	
+	public Level getLevel() {return level;}
+
 	@Override
 	public void setLevel(Level level) {
 		this.level = level;
-		policy = new MySokobanPolicy(level);	
+		policy = new MySokobanPolicy(level);
 	
 		moveUp = new Move(level,level.getPlayer(),Direction.UP);
 		moveDown = new Move(level,level.getPlayer(),Direction.DOWN);
@@ -65,5 +64,12 @@ public class MyModel extends Observable implements Model {
 		notifyObservers("display");
 		
 	}
-	
+
+	public void setCurrentLevelPath(String path) {this.currentLevelPath=path;}
+
+	public void restartLevel() {
+		String loadCommand = "load "+currentLevelPath;
+		setChanged();
+		notifyObservers(loadCommand);
+	}
 }

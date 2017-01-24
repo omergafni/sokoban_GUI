@@ -8,6 +8,7 @@ import javafx.scene.control.Alert;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.media.MediaPlayer;
 import javafx.stage.FileChooser;
 
 import java.io.File;
@@ -17,12 +18,15 @@ import java.util.ResourceBundle;
 
 public class MyView extends Observable implements View, Initializable {
 
-	@FXML
-	private GUIDisplayer GUIDisplayer;
+	@FXML private GUIDisplayer GUIDisplayer;
+	private MediaPlayer mediaPlayer;
+
 
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
-		
+
+		loadAndPlayMusic();
+		GUIDisplayer.showLogo();
 		GUIDisplayer.addEventFilter(MouseEvent.MOUSE_CLICKED, (e)->{ GUIDisplayer.requestFocus(); });
 
 		GUIDisplayer.setOnKeyPressed(new EventHandler<KeyEvent>() {
@@ -61,7 +65,7 @@ public class MyView extends Observable implements View, Initializable {
 	public void loadLevel() {
 		FileChooser fc = new FileChooser();
 		fc.setTitle("Open File");
-		fc.setInitialDirectory(new File("./resources"));
+		//fc.setInitialDirectory(new File("levels"));
 		File chosen = fc.showOpenDialog(null); // ??
 		if(chosen == null)
 			return;
@@ -74,7 +78,7 @@ public class MyView extends Observable implements View, Initializable {
 	public void saveLevel() {
 		FileChooser fc = new FileChooser();
 		fc.setTitle("Save File");
-		fc.setInitialDirectory(new File("./resources"));
+		//fc.setInitialDirectory(new File("./resources"));
 		File chosen = fc.showSaveDialog(null);
 		if(chosen == null)
 			return;
@@ -85,26 +89,25 @@ public class MyView extends Observable implements View, Initializable {
 	}
 
 	public void exit() {
-		Platform.exit();
 		setChanged();
 		notifyObservers("exit");
+		Platform.exit();
+		System.exit(0);
 	}
 
-	public GUIDisplayer getGUIDisplayer() {
-		return this.GUIDisplayer;
-	}
+	public GUIDisplayer getGUIDisplayer() {return this.GUIDisplayer;}
 
 	public void passException(Exception e) {
 		Platform.runLater(() -> {
-			if(e.getMessage().equals("save completed!\n")) {
-				Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-				alert.setTitle("Confirm");
+			if(e.getMessage().equals("save completed!")) {
+				Alert alert = new Alert(Alert.AlertType.INFORMATION);
+				alert.setTitle("Save File");
 				alert.setHeaderText("The file was saved successfully");
 				alert.setContentText(e.getMessage());
 				alert.showAndWait();
 			}
-			else if(e.getMessage().equals("You won! good job..")) {
-				Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+			else if(e.getMessage().equals("good job..")) {
+				Alert alert = new Alert(Alert.AlertType.INFORMATION);
 				alert.setTitle("Level Completed");
 				alert.setHeaderText("Level is completed!");
 				alert.setContentText(e.getMessage());
@@ -119,5 +122,32 @@ public class MyView extends Observable implements View, Initializable {
 			}
 		});
 	}
+
+	public void about() {
+		Platform.runLater( () -> {
+			Alert alert = new Alert(Alert.AlertType.INFORMATION);
+			alert.setTitle("About");
+			alert.setHeaderText("Sokoban");
+			alert.setContentText("created by Omer Gafni");
+			alert.showAndWait();
+		});
+	}
+
+	public void restartLevel() {
+		setChanged();
+		notifyObservers("restart");
+	}
+
+	public void pauseMusic() {mediaPlayer.pause();}
+
+	public void playMusic() {mediaPlayer.play();}
+
+	private void loadAndPlayMusic() {
+		URL fileUrl = MyView.class.getResource("/music/sokoMusic.mp3");
+		javafx.scene.media.Media musicFile = new javafx.scene.media.Media(fileUrl.toExternalForm());
+		this.mediaPlayer = new MediaPlayer(musicFile);
+		this.mediaPlayer.setAutoPlay(true);
+	}
+
 
 }

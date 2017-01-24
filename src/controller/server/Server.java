@@ -4,7 +4,9 @@ import java.io.OutputStream;
 
 public interface Server {
 
-	public OutputStream getOutputStream();
+	void start();
+	void stop();
+	OutputStream getOutputStream();
 	
 	
 }

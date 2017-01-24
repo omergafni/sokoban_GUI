@@ -8,7 +8,6 @@ import model.receivers.move.Direction;
 import java.awt.*;
 import java.io.Serializable;
 import java.util.ArrayList;
-import java.util.List;
 
 @SuppressWarnings("serial")
 public class Level implements Serializable {
@@ -18,7 +17,27 @@ public class Level implements Serializable {
 	private Player player = null;
 	private int maxHeight;
 	private int maxWidth;
-	
+
+	public int getStepsCounter() {
+		return stepsCounter;
+	}
+
+	public void setStepsCounter(int stepsCounter) {
+		this.stepsCounter = stepsCounter;
+	}
+
+	public int getTimer() {
+		return timer;
+	}
+
+	public void setTimer(int timer) {
+		this.timer = timer;
+	}
+
+	private int stepsCounter;
+	private int timer;
+
+
 	public Level() {}
 	public Level(ArrayList<ArrayList<WorldObject>> grid) {
 		try 
@@ -27,7 +46,8 @@ public class Level implements Serializable {
 			Point tempPlayerPosition = getPlayer().getPosition();
 			this.setPlayer(new Player(tempPlayerPosition));
 			findWidthHeight();
-			findSolCoordinates();	
+			findSolCoordinates();
+			this.stepsCounter = 0;
 		}
 		catch (Exception s) { System.out.println(s.getMessage()); }
 	}
@@ -63,7 +83,7 @@ public class Level implements Serializable {
 	
 	public void setGrid(ArrayList<ArrayList<WorldObject>> grid) {this.grid = grid;}
 	
-	public List<Point> getSolutionCoordinates() {return solutionCoordinates;}
+	public ArrayList<Point> getSolutionCoordinates() {return solutionCoordinates;} //was List<Point>
 	
 	public void setSolutionCoordinates(ArrayList<Point> solutionCoordinates) {
 		this.solutionCoordinates = solutionCoordinates;
@@ -81,9 +101,7 @@ public class Level implements Serializable {
 		return true;
 	}
 
-	public WorldObject getWorldObject(Point position) {
-		return grid.get((int)position.getX()).get((int)position.getY());
-	}
+	public WorldObject getWorldObject(Point position) {return grid.get((int)position.getX()).get((int)position.getY());}
 	
 	// Return adjacent of the given position and direction
 	public WorldObject getAdjacent(Point position, Direction direction) {
@@ -114,7 +132,9 @@ public class Level implements Serializable {
 	}
 
 	public int getMaxHeight() {return maxHeight;}
-
 	public int getMaxWidth() {return maxWidth;}
 
+	public void setMaxHeight(int maxHeight) {this.maxHeight = maxHeight;}
+	public void setMaxWidth(int maxWidth) {this.maxWidth = maxWidth;}
 }
+

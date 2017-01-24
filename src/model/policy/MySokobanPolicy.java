@@ -13,8 +13,8 @@ public class MySokobanPolicy implements Policy {
 	private Level level;
 	private Player player;
 	private Direction direction;
-	
-	public MySokobanPolicy(Level level) { this.level = level; this.player = level.getPlayer(); }
+
+	public MySokobanPolicy(Level level) {this.level = level; this.player = level.getPlayer();}
 	
 	@Override
 	public void execute(Move moveCommand) throws Exception {
@@ -33,7 +33,7 @@ public class MySokobanPolicy implements Policy {
 				moveCommand.move();
 			}
 		}
-
+		level.setStepsCounter(level.getStepsCounter()+1);
 	}
 	
 	private void push(Box box, Direction direction) {
@@ -84,5 +84,5 @@ public class MySokobanPolicy implements Policy {
 				
 		return false;
 	}
-	
+
 }

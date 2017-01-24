@@ -22,8 +22,8 @@ public class SokobanController implements Controller, Observer {
 	private MyModel myModel;
 	private MyView myView;
 	private MyServer myServer;
-	private HashMap<String,Command> commands = new HashMap<String,Command>();
-	private BlockingQueue<Command> myQueue = new ArrayBlockingQueue<Command>(128);
+	private HashMap<String,Command> commands = new HashMap<>();
+	private BlockingQueue<Command> myQueue = new ArrayBlockingQueue<>(128);
 	private boolean isRunning = true;
 
 	
@@ -34,8 +34,9 @@ public class SokobanController implements Controller, Observer {
 		commands.put("load", new LoadCommand(myModel));
 		commands.put("save", new SaveCommand(myModel));
 		commands.put("move", new MoveCommand(myModel));
-		commands.put("exit", new ExitCommand(this/*myController*/));
+		commands.put("exit", new ExitCommand(this));
 		commands.put("display", new DisplayCommand(model,myView.getGUIDisplayer()));
+		commands.put("restart",new RestartLevelCommand(myModel));
 		start();
 	}
 	
@@ -49,10 +50,10 @@ public class SokobanController implements Controller, Observer {
 		commands.put("move", new MoveCommand(myModel));
 		commands.put("exit", new ExitCommand(this));
 		commands.put("display", new DisplayCommand(myModel,new CLIDisplayer(myServer)));
+		commands.put("restart",new RestartLevelCommand(myModel));
 		start();
 	}
-	
-	
+
 	@Override
 	public void update(Observable o, Object arg) {
 		try {
@@ -60,13 +61,13 @@ public class SokobanController implements Controller, Observer {
         } catch(IOException e)
 		  {
 			if(myServer != null)
-		  		exceptionHandler(e,myServer.getCH().getOutputStream());
+		  		exceptionHandler(e,myServer.getOutputStream());
 			else
 				myView.passException(e);
 		  }
 	}
 	
-	public Command commandProcessor(String input) throws IOException{
+	private Command commandProcessor(String input) throws IOException{
 		String toProcess = input;
 		toProcess = toProcess.toLowerCase();
 		String[] params = toProcess.split(" ");
@@ -88,7 +89,7 @@ public class SokobanController implements Controller, Observer {
 					} catch (Exception e)
 					{
 						if(myServer != null)
-							exceptionHandler(e,myServer.getCH().getOutputStream());
+							exceptionHandler(e,myServer.getOutputStream());
 						else
 							myView.passException(e);
 					}
@@ -102,7 +103,7 @@ public class SokobanController implements Controller, Observer {
 	@Override
 	public void stop() { this.isRunning = false; }
 
-	public void insertCommand(Command command) {
+	private void insertCommand(Command command) {
 		try
 		{
 			if (command != null)
@@ -113,14 +114,11 @@ public class SokobanController implements Controller, Observer {
 
 	public MyServer getServer() {return myServer;}
 
-	public void setServer(MyServer server) {this.myServer = server;}
-
 	private void exceptionHandler(Exception e, OutputStream out) {
 		PrintWriter writer = new PrintWriter(out);
 		writer.println(e.getMessage());
 		writer.flush();
 	}
 
-	
 }
 

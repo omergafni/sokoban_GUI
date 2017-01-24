@@ -10,7 +10,7 @@ import java.util.HashMap;
 
 public class SaveCommand implements Command {
 
-	private HashMap<String,SaveLevel> levelSaverFactory = new HashMap<String,SaveLevel>();
+	private HashMap<String,SaveLevel> levelSaverFactory = new HashMap<>();
 	private String path = null;
 	private String type = null;
 	private Model model = null;
@@ -28,6 +28,9 @@ public class SaveCommand implements Command {
 	
 	@Override
 	public void execute() throws IOException {
+		if(model.getLevel() == null) {
+			throw new IOException("there is no level loaded, try to load level first..");
+		}
 
 		if (!(type.equals("obj") || type.equals("xml")))
 		{
@@ -35,7 +38,7 @@ public class SaveCommand implements Command {
 		}
 		levelSaverFactory.get(type).save(model.getLevel(), path);	
 		System.out.println("save completed!");
-		throw new IOException("save completed!\n");
+		throw new IOException("save completed!");
 	}
 
 }

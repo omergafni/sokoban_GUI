@@ -5,8 +5,7 @@ import java.io.OutputStream;
 
 public interface ClientHandler {
 
-	public void handleClient(InputStream inFromClient, OutputStream outToClient);
-
-	public OutputStream getOutputStream();
+	void handleClient(InputStream inFromClient, OutputStream outToClient);
+	OutputStream getOutputStream();
 		
 }

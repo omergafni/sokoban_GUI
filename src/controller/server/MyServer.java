@@ -1,11 +1,12 @@
 package controller.server;
 
 import java.io.IOException;
+import java.io.OutputStream;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.Observable;
 
-public class MyServer extends Observable {
+public class MyServer extends Observable implements Server {
 
 	private int port; 
 	private ClientHandler ch;
@@ -17,10 +18,9 @@ public class MyServer extends Observable {
 		runServer = true;
 	}
 	
-	public void runServer() throws IOException {
+	private void runServer() throws IOException {
 		System.out.println("server is online");
 		ServerSocket server = new ServerSocket(port);
-	//	server.setSoTimeout(1000);
 		while(runServer) {
 			try {
 				System.out.println("server is listening..");
@@ -30,11 +30,13 @@ public class MyServer extends Observable {
 				aClient.getInputStream().close();
 				aClient.getOutputStream().close();
 				aClient.close();
+				runServer = false; // remove this statement to keep listening when client is done
 				} catch (IOException e) {e.getStackTrace();}
 		}
 		server.close(); System.out.println("server thread closed");
 	}
-	
+
+	@Override
 	public void start() {
 		new Thread(new Runnable(){
 			public void run() {
@@ -42,12 +44,13 @@ public class MyServer extends Observable {
 				catch (IOException e) {e.getStackTrace();}}
 		}).start();
 	}
-	
-	 public void stop() {
-	        runServer = false;
-	    }
-	 
-	 public ClientHandler getCH() { return this.ch; }
 
+	@Override
+	public void stop() {runServer = false;}
+
+	@Override
+	public OutputStream getOutputStream() { return this.ch.getOutputStream(); }
+
+	public ClientHandler getClientHandler() {return this.ch;}
 	
 }

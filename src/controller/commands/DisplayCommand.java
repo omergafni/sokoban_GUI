@@ -15,7 +15,6 @@ public class DisplayCommand implements Command {
 
 	@Override
 	public void execute() throws Exception {
-		System.out.println("display command executed");
 		displayer.setLevel(model.getLevel());
 		displayer.display();
 	}

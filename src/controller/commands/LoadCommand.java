@@ -1,6 +1,6 @@
 package controller.commands;
 
-import model.Model;
+import model.MyModel;
 import model.data.level.Level;
 import model.receivers.load.LoadLevel;
 import model.receivers.load.LoadObjectLevel;
@@ -12,13 +12,13 @@ import java.util.HashMap;
 
 public class LoadCommand implements Command {
 
-	private HashMap<String,LoadLevel> levelLoaderFactory = new HashMap<String,LoadLevel>();
+	private HashMap<String,LoadLevel> levelLoaderFactory = new HashMap<>();
 	private Level level = null;
     private String type = null;
 	private String path = null;
-	private Model model = null;
+	private MyModel model = null;
 	
-	public LoadCommand(Model model) {
+	public LoadCommand(MyModel model) {
 		this.model = model;
 		levelLoaderFactory.put("txt",new LoadTextLevel());
 		levelLoaderFactory.put("obj",new LoadObjectLevel());
@@ -39,7 +39,11 @@ public class LoadCommand implements Command {
 		}
 		
 		level = levelLoaderFactory.get(type).load(path);
+		if(level == null) {
+			throw new IOException("can't load level from this file\n");
+		}
     	model.setLevel(level);
+		model.setCurrentLevelPath(path);
 		System.out.println("load completed!");
 	}
 
