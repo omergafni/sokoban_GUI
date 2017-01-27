@@ -26,7 +26,15 @@ public class SokobanController implements Controller, Observer {
 	private BlockingQueue<Command> myQueue = new ArrayBlockingQueue<>(128);
 	private boolean isRunning = true;
 
-	
+	/**
+	 * @param model
+	 * @param view
+	 *
+	 * Two different constructor are provided,
+	 * one for running without a server, and the second to run with a server and without GUI
+	 *
+	 */
+
 	public SokobanController(Model model, View view) {
 		this.myModel = (MyModel)model;
 		this.myView = (MyView)view;
@@ -101,7 +109,7 @@ public class SokobanController implements Controller, Observer {
 	}
 
 	@Override
-	public void stop() { this.isRunning = false; }
+	public void stop() {this.isRunning = false;}
 
 	private void insertCommand(Command command) {
 		try

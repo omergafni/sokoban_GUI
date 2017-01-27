@@ -52,6 +52,5 @@ public class Run extends Application {
 		else if (args.length == 0) launch(args);
 		else System.out.println("to run the game with server: provide '-server' flag and a port"+"\n"+
 								"to run the game in GUI mode use no arguments at all");
-		System.out.println("main closed");
 	}
 }

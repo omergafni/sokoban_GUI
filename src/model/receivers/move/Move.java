@@ -71,8 +71,6 @@ public class Move {
 		}
 	}
 	
-	public Direction getDirection(){
-		return direction;
-	}
+	public Direction getDirection(){return direction;}
 	
 }

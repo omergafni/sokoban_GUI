@@ -9,7 +9,7 @@ import java.io.IOException;
 public class LoadTextLevel implements LoadLevel {
 
 	@Override
-	public Level load(String path) throws IOException, IOException {
+	public Level load(String path) throws IOException {
 		
 		MyTextLevelLoader loader = new MyTextLevelLoader();
 		Level level = loader.loadLevel(new FileInputStream(path));

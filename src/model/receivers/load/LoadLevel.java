@@ -6,6 +6,6 @@ import java.io.IOException;
 
 public interface LoadLevel {
 
-	public Level load(String path) throws IOException;
+	Level load(String path) throws IOException;
 	
 }

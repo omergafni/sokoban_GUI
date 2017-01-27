@@ -10,18 +10,12 @@ public class Player extends WorldObject implements Serializable{
 	public Player(Point position) {	super(position); }
 	
 	@Override
-	public WorldObjectType getWorldObjectType() {
-		return WorldObjectType.PLAYER;
-	}
+	public WorldObjectType getWorldObjectType() {return WorldObjectType.PLAYER;}
 
 	@Override
-	public char getObjRep() {
-		return 'A';
-	}
+	public char getObjRep() {return 'A';}
 
 	@Override
-	public boolean onTarget() {
-		return onTarget;
-	}
+	public boolean onTarget() {return onTarget;}
 
 }

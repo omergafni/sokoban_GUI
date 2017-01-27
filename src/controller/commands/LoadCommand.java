@@ -26,7 +26,11 @@ public class LoadCommand implements Command {
 	}
 	
 	@Override
-	public void setParams(String[] params) {	
+	public void setParams(String[] params) throws IOException
+	{
+		if(params.length == 1) {
+			throw new IOException("error loading a file: please provide a path");
+		}
 		this.path = params[1];
 		this.type = path.substring(path.lastIndexOf('.')+1);
 	}

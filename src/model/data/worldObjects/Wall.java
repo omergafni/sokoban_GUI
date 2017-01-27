@@ -10,18 +10,13 @@ public class Wall extends WorldObject implements Serializable{
 	public Wall(Point position) { super(position); }
 
 	@Override
-	public WorldObjectType getWorldObjectType() {
-		return WorldObjectType.WALL;
-	}
+	public WorldObjectType getWorldObjectType() {return WorldObjectType.WALL;}
 
 	@Override
-	public char getObjRep() {
-		return '#';
-	}
+	public char getObjRep() {return '#';}
 
 	@Override
-	public boolean onTarget() {
-		return false; // wall can't be on target
-	}
+	public boolean onTarget() {return false;} // wall can't be on target
+
 
 }

@@ -5,7 +5,7 @@ import java.io.InputStream;
 
 public interface LevelLoader {
 
-	public Level loadLevel(InputStream input) throws IOException;
+	Level loadLevel(InputStream input) throws IOException;
 	
 }
 

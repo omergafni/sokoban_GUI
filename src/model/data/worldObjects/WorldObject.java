@@ -19,21 +19,13 @@ public abstract class WorldObject implements Serializable {
 	
 	public abstract WorldObjectType getWorldObjectType();
 
-	public Point getPosition() {
-		return position;
-	}
+	public Point getPosition() {return position;}
 
-	public void setPosition(Point position) {
-		this.position = position;
-	}
+	public void setPosition(Point position) {this.position = position;}
 
-	public boolean getOnTarget() {
-		return onTarget;
-	}
+	public boolean getOnTarget() {return onTarget;}
 
-	public void setOnTarget(boolean onTarget) {
-		this.onTarget = onTarget;
-	}
+	public void setOnTarget(boolean onTarget) {this.onTarget = onTarget;}
 
 	
 

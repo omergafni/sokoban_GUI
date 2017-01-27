@@ -1,42 +1,19 @@
 package view;
 
-import com.sun.javafx.iio.common.ImageDescriptor;
-import com.sun.javafx.tk.*;
 import javafx.application.Platform;
-import javafx.beans.property.SimpleStringProperty;
-import javafx.beans.property.StringProperty;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
-import javafx.scene.control.ToolBar;
 import javafx.scene.image.Image;
 import model.data.level.Level;
 import model.receivers.display.Displayer;
-
-import java.awt.*;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.net.URL;
 
 public class GUIDisplayer extends Canvas implements Displayer
 {
 	protected Level level;
 	private int maxHeight;
 	private int maxWidth;
-	private StringProperty wallFileName;
-	private StringProperty floorFileName;
-	private StringProperty boxFileName;
-	private StringProperty targetFileName;
-	private StringProperty playerFileName;
-	private StringProperty logoFileName;
 
-	public GUIDisplayer() {
-		wallFileName = new SimpleStringProperty();
-		floorFileName = new SimpleStringProperty();
-		boxFileName = new SimpleStringProperty();
-		targetFileName = new SimpleStringProperty();
-		playerFileName = new SimpleStringProperty();
-		logoFileName = new SimpleStringProperty();
-	}
+	public GUIDisplayer() {}
 
 	private void redraw() throws Exception {
 		if(level == null)
@@ -48,20 +25,11 @@ public class GUIDisplayer extends Canvas implements Displayer
 		
 		GraphicsContext gc = getGraphicsContext2D();
 
-		Image wall = new Image(getClass().getResourceAsStream("/Images/wall.jpg"));
-		Image player = new Image(getClass().getResourceAsStream("/Images/player.jpg"));
-		Image target = new Image(getClass().getResourceAsStream("/Images/target.jpg"));
-		Image box = new Image(getClass().getResourceAsStream("/Images/box.jpg"));
-		Image floor = new Image(getClass().getResourceAsStream("/Images/floor.jpg"));
-
-			/*
-			wall = new Image(new FileInputStream(wallFileName.get()));
-			player = new Image(new FileInputStream(playerFileName.get()));
-			target = new Image(new FileInputStream(targetFileName.get()));
-			box = new Image(new FileInputStream(boxFileName.get()));
-			floor = new Image(new FileInputStream(floorFileName.get()));
-			*/
-
+		Image wall = new Image(getClass().getResourceAsStream("/resources/images/wall.jpg"));
+		Image player = new Image(getClass().getResourceAsStream("/resources/images/player.jpg"));
+		Image target = new Image(getClass().getResourceAsStream("/resources/images/target.jpg"));
+		Image box = new Image(getClass().getResourceAsStream("/resources/images/box.jpg"));
+		Image floor = new Image(getClass().getResourceAsStream("/resources/images/floor.jpg"));
 
 		gc.clearRect(0, 0, displayerWidth, displayerHeight);
 		
@@ -94,14 +62,8 @@ public class GUIDisplayer extends Canvas implements Displayer
 
 	public void showLogo() {
 
-		Image logo = null;
-		try
-		{
-			logo = new Image(getClass().getResourceAsStream("/Images/logo.jpg"));
-		} catch(Exception e) {e.getMessage();} //???
-
+		Image logo = new Image(getClass().getResourceAsStream("/resources/images/logo.jpg"));
 		GraphicsContext gc = getGraphicsContext2D();
-
 		gc.drawImage(logo,30,30,440,440);
 
 	}
@@ -117,21 +79,5 @@ public class GUIDisplayer extends Canvas implements Displayer
 		maxHeight = level.getMaxHeight();
 		maxWidth = level.getMaxWidth();
 	}
-
-	public String getWallFileName() { return wallFileName.get(); }
-	public String getFloorFileName() { return floorFileName.get(); }
-	public String getBoxFileName() { return boxFileName.get(); }
-	public String getTargetFileName() { return targetFileName.get(); }
-	public String getPlayerFileName() { return playerFileName.get(); }
-	public String getLogoFileName() { return logoFileName.get(); }
-
-
-	public void setWallFileName(String path) { this.wallFileName.set(path); }
-	public void setFloorFileName(String path) { this.floorFileName.set(path); }
-	public void setBoxFileName(String path) { this.boxFileName.set(path); }
-	public void setTargetFileName(String path) { this.targetFileName.set(path); }
-	public void setPlayerFileName(String path) { this.playerFileName.set(path); }
-	public void setLogoFileName(String path) { this.logoFileName.set(path); }
-
 
 }

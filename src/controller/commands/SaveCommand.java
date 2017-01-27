@@ -21,7 +21,10 @@ public class SaveCommand implements Command {
 		levelSaverFactory.put("xml", new SaveToXMLFile());
 	}
 	
-	public void setParams(String[] params) {
+	public void setParams(String[] params) throws IOException{
+		if(params.length == 1) {
+			throw new IOException("error saving a file: please provide a path");
+		}
 		this.path = params[1];
 		this.type = path.substring(path.lastIndexOf('.')+1);
 	}

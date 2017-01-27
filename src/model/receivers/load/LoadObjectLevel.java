@@ -10,7 +10,7 @@ import java.io.ObjectInputStream;
 public class LoadObjectLevel implements LoadLevel {
 
 	@Override
-	public Level load(String path) throws IOException, IOException {
+	public Level load(String path) throws IOException {
 		
 		MyObjectLevelLoader loader = new MyObjectLevelLoader();
 		ObjectInputStream in = new ObjectInputStream(new FileInputStream(path));

@@ -6,7 +6,7 @@ import java.util.Observable;
 public class CLI extends Observable implements ClientHandler {
 
 	private String userInput;
-	OutputStream out;
+	private OutputStream out;
 	boolean run = true;
 
 	@Override
@@ -27,7 +27,7 @@ public class CLI extends Observable implements ClientHandler {
 			switch(userInput) {
 					
 			case "exit": 	run = false;
-							/* This exit string must be equals to the server string */
+							/* This exit string must be equals to the server exit string */
 							writer.println("thanks for playing... bye bye :)");
 							writer.flush(); 
 							setChanged();
@@ -46,21 +46,22 @@ public class CLI extends Observable implements ClientHandler {
 	}
 	
 	public void showMenu(PrintWriter writer) {
-		
-		writer.println("Welcome to Sokoban game!");
-		writer.println("game commands are:"+"\n"
-					  +">Load 'filepath'"+"\n"
-					  +">Display"+"\n"
-					  +">Move {up, down, left, right}"+"\n"
-					  +">Save 'filepath'"+" {*.obj, *.xml}"+"\n"
-					  +">Menu"+"\n"
-					  +">Exit"+"\n");
+
+		writer.println("# # # # # # # # # # # # # # # # # # # # # # #"+"\n#");
+		writer.println("#\tWelcome to Sokoban game!");
+		writer.println("#\tgame commands are:"+"\n"
+					  +"#\t\t>Load 'filepath'"+"\n"
+					  +"#\t\t>Display"+"\n"
+					  +"#\t\t>Move {up, down, left, right}"+"\n"
+					  +"#\t\t>Save 'filepath'"+" {*.obj, *.xml}"+"\n"
+					  +"#\t\t>Restart"+"\n"
+				      +"#\t\t>Menu"+"\n"
+					  +"#\t\t>Exit"+"\n#");
+		writer.println("# # # # # # # # # # # # # # # # # # # # # # #");
 		writer.flush();
 	}
 
 	@Override
-	public OutputStream getOutputStream() {
-		return out;
-	}
+	public OutputStream getOutputStream() {return out;}
 
 }

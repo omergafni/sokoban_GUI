@@ -21,7 +21,6 @@ public class MyView extends Observable implements View, Initializable {
 	@FXML private GUIDisplayer GUIDisplayer;
 	private MediaPlayer mediaPlayer;
 
-
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 
@@ -65,8 +64,14 @@ public class MyView extends Observable implements View, Initializable {
 	public void loadLevel() {
 		FileChooser fc = new FileChooser();
 		fc.setTitle("Open File");
-		//fc.setInitialDirectory(new File("levels"));
-		File chosen = fc.showOpenDialog(null); // ??
+		fc.setInitialDirectory(new File (System.getProperty("user.dir")));
+		fc.getExtensionFilters().addAll(
+				new FileChooser.ExtensionFilter("Text","*.txt"),
+				new FileChooser.ExtensionFilter("Object","*.obj"),
+				new FileChooser.ExtensionFilter("XML","*.xml")
+		);
+
+		File chosen = fc.showOpenDialog(null);
 		if(chosen == null)
 			return;
 		String loadCommand = "load "+chosen.getAbsolutePath();
@@ -78,7 +83,12 @@ public class MyView extends Observable implements View, Initializable {
 	public void saveLevel() {
 		FileChooser fc = new FileChooser();
 		fc.setTitle("Save File");
-		//fc.setInitialDirectory(new File("./resources"));
+		fc.setInitialDirectory(new File (System.getProperty("user.dir")));
+		fc.getExtensionFilters().addAll(
+				new FileChooser.ExtensionFilter("Object","*.obj"),
+				new FileChooser.ExtensionFilter("XML","*.xml")
+		);
+
 		File chosen = fc.showSaveDialog(null);
 		if(chosen == null)
 			return;
@@ -143,11 +153,10 @@ public class MyView extends Observable implements View, Initializable {
 	public void playMusic() {mediaPlayer.play();}
 
 	private void loadAndPlayMusic() {
-		URL fileUrl = MyView.class.getResource("/music/sokoMusic.mp3");
+		URL fileUrl = MyView.class.getResource("/resources/music/sokoMusic.mp3");
 		javafx.scene.media.Media musicFile = new javafx.scene.media.Media(fileUrl.toExternalForm());
 		this.mediaPlayer = new MediaPlayer(musicFile);
 		this.mediaPlayer.setAutoPlay(true);
 	}
-
 
 }

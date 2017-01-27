@@ -15,13 +15,9 @@ public class Box extends WorldObject implements Serializable {
 	}
 
 	@Override
-	public char getObjRep() {
-		return '@';
-	}
+	public char getObjRep() {return '@';}
 
 	@Override
-	public boolean onTarget() {
-		return onTarget;
-	}
+	public boolean onTarget() {return onTarget;}
 	
 }

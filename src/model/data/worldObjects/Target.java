@@ -10,18 +10,12 @@ public class Target extends WorldObject implements Serializable{
 	public Target(Point position) {	super(position); }
 
 	@Override
-	public WorldObjectType getWorldObjectType() {
-		return WorldObjectType.TARGET;
-	}
+	public WorldObjectType getWorldObjectType() {return WorldObjectType.TARGET;}
 
 	@Override
-	public char getObjRep() {
-		return 'o';
-	}
+	public char getObjRep() {return 'o';}
 
 	@Override
-	public boolean onTarget() {
-		return false; // target can't be on target
-	}
+	public boolean onTarget() {return false;} // target can't be on target
 
 }

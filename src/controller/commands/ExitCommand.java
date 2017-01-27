@@ -14,13 +14,12 @@ public class ExitCommand implements Command {
 		controller.stop();
 		if(((SokobanController)controller).getServer() != null) {
 			((SokobanController)controller).getServer().stop();
+			System.exit(0);
 		}
 		System.out.println("exit command executed");
 	}
 	
-	public void setController(Controller controller) {
-		this.controller = controller;
-	}
+	public void setController(Controller controller) {this.controller = controller;}
 
 	@Override
 	public void setParams(String[] params) {}
