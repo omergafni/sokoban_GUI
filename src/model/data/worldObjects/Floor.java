@@ -16,7 +16,7 @@ public class Floor extends WorldObject implements Serializable {
 	public char getObjRep() {return ' ';}
 
 	@Override
-	public boolean onTarget() {return false;} // floor can't be on target
+	public boolean onTarget() {return false;} // floor can't be on a target
  
 	
 }

@@ -65,14 +65,15 @@ public class SokobanController implements Controller, Observer {
 	@Override
 	public void update(Observable o, Object arg) {
 		try {
-				insertCommand(commandProcessor((String)arg));
-        } catch(IOException e)
-		  {
+			insertCommand(commandProcessor((String)arg));
+        }
+        catch(IOException e)
+		{
 			if(myServer != null)
 		  		exceptionHandler(e,myServer.getOutputStream());
 			else
 				myView.passException(e);
-		  }
+		}
 	}
 	
 	private Command commandProcessor(String input) throws IOException{
@@ -94,7 +95,8 @@ public class SokobanController implements Controller, Observer {
 				while (isRunning) {
 					try {
 						myQueue.take().execute();
-					} catch (Exception e)
+					}
+					catch (Exception e)
 					{
 						if(myServer != null)
 							exceptionHandler(e,myServer.getOutputStream());

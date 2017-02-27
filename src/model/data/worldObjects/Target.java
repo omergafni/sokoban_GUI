@@ -4,7 +4,7 @@ import java.awt.*;
 import java.io.Serializable;
 
 @SuppressWarnings("serial")
-public class Target extends WorldObject implements Serializable{
+public class Target extends WorldObject implements Serializable {
 
 	public Target() {}
 	public Target(Point position) {	super(position); }
@@ -16,6 +16,6 @@ public class Target extends WorldObject implements Serializable{
 	public char getObjRep() {return 'o';}
 
 	@Override
-	public boolean onTarget() {return false;} // target can't be on target
+	public boolean onTarget() {return false;} // target can't be on a target
 
 }

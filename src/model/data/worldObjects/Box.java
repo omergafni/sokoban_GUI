@@ -10,9 +10,7 @@ public class Box extends WorldObject implements Serializable {
 	public Box(Point position) { super(position); }
 
 	@Override
-	public WorldObjectType getWorldObjectType() {
-		return WorldObjectType.BOX;
-	}
+	public WorldObjectType getWorldObjectType() {return WorldObjectType.BOX;}
 
 	@Override
 	public char getObjRep() {return '@';}

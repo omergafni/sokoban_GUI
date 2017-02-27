@@ -27,8 +27,7 @@ public class CLI extends Observable implements ClientHandler {
 			switch(userInput) {
 					
 			case "exit": 	run = false;
-							/* This exit string must be equals to the server exit string */
-							writer.println("thanks for playing... bye bye :)");
+							writer.println("thanks for playing... bye bye bye :)");
 							writer.flush(); 
 							setChanged();
 							notifyObservers(userInput);
@@ -42,7 +41,7 @@ public class CLI extends Observable implements ClientHandler {
 							break;
 			}
 		} 
-		} catch (IOException e) { e.printStackTrace();}
+		} catch (IOException e) {e.printStackTrace();}
 	}
 	
 	public void showMenu(PrintWriter writer) {

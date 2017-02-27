@@ -19,8 +19,7 @@ public class Move {
 		this.worldObject = worldObject;
 		this.direction = direction;
 	}
-	
-	
+
 	public void move() {
 
 		// Current WorldObject position
@@ -31,7 +30,7 @@ public class Move {
 		// Current WorldObject onTarget status
 		boolean onTarget = worldObject.getOnTarget();
 
-		// Check if the WorldObject is going to cover something
+		// Checking if the WorldObject is going to cover something
 		if (level.getAdjacent(currentPosition,direction).getWorldObjectType() == WorldObjectType.TARGET)
 			worldObject.setOnTarget(true);
 		if (level.getAdjacent(currentPosition,direction).getWorldObjectType() == WorldObjectType.FLOOR)

@@ -14,7 +14,7 @@ public class CLIDisplayer implements Displayer{
 	private OutputStream out;
 	private MyServer server;
 	
-	public CLIDisplayer(MyServer server) {this.server = server; }
+	public CLIDisplayer(MyServer server) {this.server = server;}
 
 	@Override
 	public void setLevel(Level level) {this.level = level;}

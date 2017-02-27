@@ -15,6 +15,5 @@ public class SaveToXMLFile implements SaveLevel{
 		XMLEncoder encoder = new XMLEncoder(new BufferedOutputStream(new FileOutputStream(path)));
 		encoder.writeObject(level);
 		encoder.close();	
-		
 	}
 }

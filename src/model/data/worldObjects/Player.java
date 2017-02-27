@@ -4,7 +4,7 @@ import java.awt.*;
 import java.io.Serializable;
 
 @SuppressWarnings("serial")
-public class Player extends WorldObject implements Serializable{
+public class Player extends WorldObject implements Serializable {
 
 	public Player() {}
 	public Player(Point position) {	super(position); }

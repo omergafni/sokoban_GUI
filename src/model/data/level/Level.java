@@ -17,26 +17,8 @@ public class Level implements Serializable {
 	private Player player = null;
 	private int maxHeight;
 	private int maxWidth;
-
-	public int getStepsCounter() {
-		return stepsCounter;
-	}
-
-	public void setStepsCounter(int stepsCounter) {
-		this.stepsCounter = stepsCounter;
-	}
-
-	public int getTimer() {
-		return timer;
-	}
-
-	public void setTimer(int timer) {
-		this.timer = timer;
-	}
-
 	private int stepsCounter;
 	private int timer;
-
 
 	public Level() {}
 	public Level(ArrayList<ArrayList<WorldObject>> grid) {
@@ -52,7 +34,7 @@ public class Level implements Serializable {
 		catch (Exception s) { System.out.println(s.getMessage()); }
 	}
 	
-	// Finding all TARGETs coordinates
+	// Finding all TARGET's coordinates
 	private void findSolCoordinates() {
 		for(int i = 0; i < grid.size(); i++) 
 			for(int j = 0; j < grid.get(i).size(); j++) {
@@ -76,15 +58,12 @@ public class Level implements Serializable {
 		}
 		return null;
 	}
-	
 	private void setPlayer(Player player) {this.player = player;}
 	
 	public final ArrayList<ArrayList<WorldObject>> getGrid() {return grid;}
-	
 	public void setGrid(ArrayList<ArrayList<WorldObject>> grid) {this.grid = grid;}
 	
 	public ArrayList<Point> getSolutionCoordinates() {return solutionCoordinates;} //was List<Point>
-	
 	public void setSolutionCoordinates(ArrayList<Point> solutionCoordinates) {
 		this.solutionCoordinates = solutionCoordinates;
 	}
@@ -123,6 +102,7 @@ public class Level implements Serializable {
 		} 
 	}
 
+	// Setting the maxWidth and maxHeight variables to the maximum grid's height and width
 	private void findWidthHeight() {
 		maxHeight = grid.size();
 		maxWidth = 0;
@@ -136,5 +116,12 @@ public class Level implements Serializable {
 
 	public void setMaxHeight(int maxHeight) {this.maxHeight = maxHeight;}
 	public void setMaxWidth(int maxWidth) {this.maxWidth = maxWidth;}
+
+	public int getStepsCounter() {return stepsCounter;}
+	public void setStepsCounter(int stepsCounter) {this.stepsCounter = stepsCounter;}
+
+	public int getTimer() {return timer;}
+	public void setTimer(int timer) {this.timer = timer;}
+
 }
 
