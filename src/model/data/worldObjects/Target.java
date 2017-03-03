@@ -13,7 +13,7 @@ public class Target extends WorldObject implements Serializable {
 	public WorldObjectType getWorldObjectType() {return WorldObjectType.TARGET;}
 
 	@Override
-	public char getObjRep() {return 'o';}
+	public char getObjRep() {return '@';}
 
 	@Override
 	public boolean onTarget() {return false;} // target can't be on a target

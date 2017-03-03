@@ -28,6 +28,29 @@ public class MyTextLevelLoader implements LevelLoader{
 
 			for(int j = 0; j < line.length(); j++)
 			{
+				if (line.charAt(j) == 'x')
+					grid.get(i).add(new Wall(new Point(i,j)));
+				if (line.charAt(j) == 'B' || line.charAt(j) == 'b')
+					grid.get(i).add(new Box(new Point(i,j),false,false,(line.charAt(j)=='b')));
+				if (line.charAt(j) == 'R')
+					grid.get(i).add(new Box(new Point(i,j),false,true,false));
+				if (line.charAt(j) == 'L')
+					grid.get(i).add(new Box(new Point(i,j),true,false,false));
+				if (line.charAt(j) == '@')
+					grid.get(i).add(new Target(new Point(i,j)));
+				if (line.charAt(j) == ' ')
+					grid.get(i).add(new Floor(new Point(i,j)));
+				if (line.charAt(j) == 'A')
+					grid.get(i).add(new Player(new Point(i,j),false,false,false));
+				if (line.charAt(j) == 'l')
+					grid.get(i).add(new Player(new Point(i,j),true,false,false));
+				if (line.charAt(j) == 'r')
+					grid.get(i).add(new Player(new Point(i,j),false,true,false));
+				if (line.charAt(j) == '>')
+					grid.get(i).add(new RightDoor(new Point(i,j)));
+				if (line.charAt(j) == '<')
+					grid.get(i).add(new LeftDoor(new Point(i,j)));
+				/*
 				if (line.charAt(j) == '#')
 					grid.get(i).add(new Wall(new Point(i,j)));
 				if (line.charAt(j) == '@')
@@ -38,6 +61,7 @@ public class MyTextLevelLoader implements LevelLoader{
 					grid.get(i).add(new Floor(new Point(i,j)));
 				if (line.charAt(j) == 'A')
 					grid.get(i).add(new Player(new Point(i,j)));
+				*/
 			}
 			i++;
 		}

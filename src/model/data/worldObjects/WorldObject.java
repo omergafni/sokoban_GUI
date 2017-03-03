@@ -8,6 +8,8 @@ public abstract class WorldObject implements Serializable {
 
 	protected Point position;
 	protected boolean onTarget = false;
+	protected boolean onRightDoor = false;
+	protected boolean onLeftDoor = false;
 	
 	public WorldObject() {}
 	public WorldObject(Point position) { this.position = position; }
@@ -22,7 +24,13 @@ public abstract class WorldObject implements Serializable {
 	public boolean getOnTarget() {return onTarget;}
 	public void setOnTarget(boolean onTarget) {this.onTarget = onTarget;}
 
-	
+	public boolean isOnLeftDoor() {
+		return onLeftDoor;
+	}
+
+	public boolean isOnRightDoor() {
+		return onRightDoor;
+	}
 
 	
 }

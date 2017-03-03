@@ -13,7 +13,7 @@ public class Wall extends WorldObject implements Serializable {
 	public WorldObjectType getWorldObjectType() {return WorldObjectType.WALL;}
 
 	@Override
-	public char getObjRep() {return '#';}
+	public char getObjRep() {return 'x';}
 
 	@Override
 	public boolean onTarget() {return false;} // wall can't be on a target

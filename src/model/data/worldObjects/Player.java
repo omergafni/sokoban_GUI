@@ -7,7 +7,12 @@ import java.io.Serializable;
 public class Player extends WorldObject implements Serializable {
 
 	public Player() {}
-	public Player(Point position) {	super(position); }
+	public Player(Point position, boolean onLeftDoor, boolean onRightDoor, boolean onTarget) {
+		super(position);
+		this.onTarget = onTarget;
+		this.onRightDoor = onRightDoor;
+		this.onLeftDoor = onLeftDoor;
+	}
 	
 	@Override
 	public WorldObjectType getWorldObjectType() {return WorldObjectType.PLAYER;}
@@ -17,5 +22,6 @@ public class Player extends WorldObject implements Serializable {
 
 	@Override
 	public boolean onTarget() {return onTarget;}
+
 
 }

@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="sokoban_gui:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/sokoban_gui_jar</output-path>
+    <root id="archive" name="sokoban_gui.jar">
+      <element id="module-output" name="sokoban_gui" />
+      <element id="dir-copy" path="$PROJECT_DIR$/src" />
+    </root>
+  </artifact>
+</component>

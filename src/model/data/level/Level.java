@@ -19,6 +19,7 @@ public class Level implements Serializable {
 	private int maxWidth;
 	private int stepsCounter;
 	private int timer;
+	private char[][] levelAsChar = null;
 
 	public Level() {}
 	public Level(ArrayList<ArrayList<WorldObject>> grid) {
@@ -26,7 +27,7 @@ public class Level implements Serializable {
 		{			
 			this.grid = grid;
 			Point tempPlayerPosition = getPlayer().getPosition();
-			this.setPlayer(new Player(tempPlayerPosition));
+			this.setPlayer(new Player(tempPlayerPosition,false,false,false));
 			findWidthHeight();
 			findSolCoordinates();
 			this.stepsCounter = 0;
@@ -63,7 +64,7 @@ public class Level implements Serializable {
 	public final ArrayList<ArrayList<WorldObject>> getGrid() {return grid;}
 	public void setGrid(ArrayList<ArrayList<WorldObject>> grid) {this.grid = grid;}
 	
-	public ArrayList<Point> getSolutionCoordinates() {return solutionCoordinates;} //was List<Point>
+	public ArrayList<Point> getSolutionCoordinates() {return solutionCoordinates;}
 	public void setSolutionCoordinates(ArrayList<Point> solutionCoordinates) {
 		this.solutionCoordinates = solutionCoordinates;
 	}
@@ -81,7 +82,18 @@ public class Level implements Serializable {
 	}
 
 	public WorldObject getWorldObject(Point position) {return grid.get((int)position.getX()).get((int)position.getY());}
-	
+
+	public char[][] getLevelAsCharMatrix(){
+		if(levelAsChar != null) return levelAsChar;
+		char[][] matrix = new char[maxHeight][maxWidth];
+		for(int i = 0; i < grid.size(); i++) {
+			for(int j = 0; j < grid.get(i).size(); j++) {
+				matrix[i][j] = grid.get(i).get(j).getObjRep();
+			}
+		}
+		return matrix;
+	}
+
 	// Return adjacent of the given position and direction
 	public WorldObject getAdjacent(Point position, Direction direction) {
 				

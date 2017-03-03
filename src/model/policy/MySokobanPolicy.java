@@ -21,9 +21,9 @@ public class MySokobanPolicy implements Policy {
 		
 		this.direction = moveCommand.getDirection();
 		
-		if (checkIfMovePossible())
+		if (checkIfMovePossible(direction))
 		{
-			if (checkIfNeedPush())
+			if (checkIfNeedPush(direction))
 			{
 				push((Box)level.getAdjacent(player.getPosition(), direction),direction);
 				moveCommand.move();
@@ -45,8 +45,26 @@ public class MySokobanPolicy implements Policy {
 		}
 		
 	}
-	
-	private boolean checkIfMovePossible() {
+
+	public boolean checkIfMovePossible(Direction direction) {
+		if (wallCollision(player,direction))
+			return false;
+
+		if (level.getAdjacent(player.getPosition(),direction).getWorldObjectType() == WorldObjectType.BOX)
+			return checkIfNeedPush(direction);
+
+		if (level.getAdjacent(player.getPosition(),direction).getWorldObjectType() == WorldObjectType.RIGHT_DOOR)
+			if (direction == Direction.RIGHT) return true;
+
+		if (level.getAdjacent(player.getPosition(),direction).getWorldObjectType() == WorldObjectType.LEFT_DOOR)
+			if (direction == Direction.LEFT) return true;
+
+
+		return true;
+	}
+
+	/*
+	public boolean checkIfMovePossible() {
 		if (wallCollision(player,direction))
 			return false;
 
@@ -55,22 +73,32 @@ public class MySokobanPolicy implements Policy {
 		
 		return true;
 	}
-	
-	private boolean checkIfNeedPush() {
+	*/
+	private boolean checkIfNeedPush(Direction direction) {
 		
 		WorldObject potentialBox = level.getAdjacent(player.getPosition(),direction);
 		WorldObject potentialFloor = level.getAdjacent(potentialBox.getPosition(),direction);
-		
+		WorldObject potentialRightDoor = level.getAdjacent(potentialBox.getPosition(),direction);
+		WorldObject potentialLeftDoor = level.getAdjacent(potentialBox.getPosition(),direction);
+
+
 		if (potentialBox.getWorldObjectType() == WorldObjectType.BOX) 
 		{
-			if (potentialFloor.getWorldObjectType() == WorldObjectType.FLOOR)
+			if (potentialLeftDoor.getWorldObjectType() == WorldObjectType.LEFT_DOOR) {
+				if (direction == Direction.LEFT) return true;
+			}
+			if (potentialRightDoor.getWorldObjectType() == WorldObjectType.RIGHT_DOOR) {
+				if (direction == Direction.RIGHT) return true;
+			}
+			if (potentialFloor.getWorldObjectType() == WorldObjectType.FLOOR || potentialFloor.getWorldObjectType() == WorldObjectType.TARGET)
 			{
+				if (potentialBox.isOnLeftDoor() && direction != Direction.LEFT)
+					return false;
+				if (potentialBox.isOnRightDoor() && direction != Direction.RIGHT)
+					return false;
 				return true;
 			}
-			if (potentialFloor.getWorldObjectType() == WorldObjectType.TARGET)
-			{
-				return true;
-			}
+
 		}
 		return false;
 	}

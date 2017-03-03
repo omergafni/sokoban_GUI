@@ -7,15 +7,26 @@ import java.io.Serializable;
 public class Box extends WorldObject implements Serializable {
 
 	public Box() {}
-	public Box(Point position) { super(position); }
+	public Box(Point position, boolean onLeftDoor, boolean onRightDoor, boolean onTarget) {
+		super(position);
+		this.onTarget = onTarget;
+		this.onRightDoor = onRightDoor;
+		this.onLeftDoor = onLeftDoor;
+	}
 
 	@Override
 	public WorldObjectType getWorldObjectType() {return WorldObjectType.BOX;}
 
 	@Override
-	public char getObjRep() {return '@';}
+	public char getObjRep() {
+		if(onTarget)
+			return 'b';
+		return 'B';
+	}
 
 	@Override
 	public boolean onTarget() {return onTarget;}
+
+
 	
 }
