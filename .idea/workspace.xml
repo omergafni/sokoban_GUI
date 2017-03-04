@@ -10,16 +10,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/sokoban_gui/controller/commands/MoveCommand.class" afterPath="$PROJECT_DIR$/out/production/sokoban_gui/controller/commands/MoveCommand.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/sokoban_gui/model/MyModel$1.class" afterPath="$PROJECT_DIR$/out/production/sokoban_gui/model/MyModel$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/sokoban_gui/model/MyModel.class" afterPath="$PROJECT_DIR$/out/production/sokoban_gui/model/MyModel.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/sokoban_gui/model/data/level/Level$1.class" afterPath="$PROJECT_DIR$/out/production/sokoban_gui/model/data/level/Level$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/sokoban_gui/model/policy/MySokobanPolicy.class" afterPath="$PROJECT_DIR$/out/production/sokoban_gui/model/policy/MySokobanPolicy.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/sokoban_gui/model/receivers/move/Direction.class" afterPath="$PROJECT_DIR$/out/production/sokoban_gui/model/receivers/move/Direction.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/sokoban_gui/model/receivers/move/Move$1.class" afterPath="$PROJECT_DIR$/out/production/sokoban_gui/model/receivers/move/Move$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/controller/commands/MoveCommand.java" afterPath="$PROJECT_DIR$/src/controller/commands/MoveCommand.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/MyModel.java" afterPath="$PROJECT_DIR$/src/model/MyModel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/data/level/Level.java" afterPath="$PROJECT_DIR$/src/model/data/level/Level.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/policy/MySokobanPolicy.java" afterPath="$PROJECT_DIR$/src/model/policy/MySokobanPolicy.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/receivers/move/Direction.java" afterPath="$PROJECT_DIR$/src/model/receivers/move/Direction.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/receivers/move/Move.java" afterPath="$PROJECT_DIR$/src/model/receivers/move/Move.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/testEx/CommandScheduler.java" afterPath="$PROJECT_DIR$/src/testEx/CommandScheduler.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/testEx/CompressorClient.java" afterPath="$PROJECT_DIR$/src/testEx/CompressorClient.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/testEx/MyCompressorClient.java" afterPath="$PROJECT_DIR$/src/testEx/MyCompressorClient.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/testEx/MyPolicyImplementor.java" afterPath="$PROJECT_DIR$/src/testEx/MyPolicyImplementor.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/testEx/Run.java" afterPath="$PROJECT_DIR$/src/testEx/Run.java" />
     </list>
     <list id="14a69492-4d72-4884-a0d1-7c9632f8f3c1" name="Rejected commit: Default" comment="v1.0" />
@@ -101,8 +101,8 @@
       <file leaf-file-name="Run.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/testEx/Run.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1504">
-              <caret line="100" column="38" lean-forward="true" selection-start-line="100" selection-start-column="38" selection-end-line="100" selection-end-column="38" />
+            <state relative-caret-position="208">
+              <caret line="19" column="10" lean-forward="false" selection-start-line="19" selection-start-column="10" selection-end-line="19" selection-end-column="10" />
               <folding />
             </state>
           </provider>
@@ -111,8 +111,8 @@
       <file leaf-file-name="Level.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/testEx/Level.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="19" column="5" lean-forward="false" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
+            <state relative-caret-position="352">
+              <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -121,8 +121,8 @@
       <file leaf-file-name="CompressorClient.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/testEx/CompressorClient.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="64">
-              <caret line="4" column="17" lean-forward="false" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+            <state relative-caret-position="112">
+              <caret line="7" column="14" lean-forward="true" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -131,28 +131,28 @@
       <file leaf-file-name="MyCompressorClient.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/testEx/MyCompressorClient.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
+            <state relative-caret-position="603">
               <caret line="39" column="0" lean-forward="true" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LoadObjectLevel.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/model/receivers/load/LoadObjectLevel.java">
+      <file leaf-file-name="Command.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/testEx/Command.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="64">
-              <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+            <state relative-caret-position="32">
+              <caret line="2" column="22" lean-forward="false" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LoadTextLevel.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/model/receivers/load/LoadTextLevel.java">
+      <file leaf-file-name="CommandScheduler.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/testEx/CommandScheduler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+            <state relative-caret-position="800">
+              <caret line="53" column="23" lean-forward="true" selection-start-line="53" selection-start-column="23" selection-end-line="53" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -250,7 +250,6 @@
         <option value="$PROJECT_DIR$/build.fxbuild" />
         <option value="$PROJECT_DIR$/.settings/org.eclipse.jdt.core.prefs" />
         <option value="$PROJECT_DIR$/src/boot/Run.java" />
-        <option value="$PROJECT_DIR$/src/testEx/CompressorClient.java" />
         <option value="$PROJECT_DIR$/src/testEx/Command.java" />
         <option value="$PROJECT_DIR$/src/testEx/Level.java" />
         <option value="$PROJECT_DIR$/src/client/A.java" />
@@ -267,14 +266,15 @@
         <option value="$PROJECT_DIR$/src/client/CLIclient.java" />
         <option value="$PROJECT_DIR$/src/testEx/CommandScheduler.java" />
         <option value="$PROJECT_DIR$/src/model/receivers/move/Direction.java" />
-        <option value="$PROJECT_DIR$/src/testEx/Run.java" />
         <option value="$PROJECT_DIR$/src/model/policy/MySokobanPolicy.java" />
         <option value="$PROJECT_DIR$/src/model/receivers/move/Move.java" />
         <option value="$PROJECT_DIR$/src/controller/commands/MoveCommand.java" />
         <option value="$PROJECT_DIR$/src/model/MyModel.java" />
         <option value="$PROJECT_DIR$/src/model/data/level/Level.java" />
-        <option value="$PROJECT_DIR$/src/testEx/MyCompressorClient.java" />
         <option value="$PROJECT_DIR$/src/testEx/MyPolicyImplementor.java" />
+        <option value="$PROJECT_DIR$/src/testEx/CompressorClient.java" />
+        <option value="$PROJECT_DIR$/src/testEx/MyCompressorClient.java" />
+        <option value="$PROJECT_DIR$/src/testEx/Run.java" />
       </list>
     </option>
   </component>
@@ -767,7 +767,14 @@
       <option name="project" value="LOCAL" />
       <updated>1488554929009</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="exam version 1.0">
+      <created>1488650863534</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1488650863534</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -846,11 +853,12 @@
     <MESSAGE value="v1.3" />
     <MESSAGE value="v1.4" />
     <MESSAGE value="exam version" />
-    <option name="LAST_COMMIT_MESSAGE" value="exam version" />
+    <MESSAGE value="exam version 1.0" />
+    <option name="LAST_COMMIT_MESSAGE" value="exam version 1.0" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="80" />
+      <option name="time" value="82" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1034,7 +1042,7 @@
         <state relative-caret-position="96">
           <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1092,14 +1100,6 @@
             <element signature="e#867#868#0" expanded="false" />
             <element signature="e#892#893#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/testEx/Command.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="32">
-          <caret line="2" column="22" lean-forward="false" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1199,14 +1199,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/testEx/CommandScheduler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="647">
-          <caret line="51" column="0" lean-forward="true" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/model/receivers/load/LoadLevel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="64">
@@ -1265,33 +1257,49 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/testEx/Run.java">
+    <entry file="file://$PROJECT_DIR$/src/testEx/Command.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1504">
-          <caret line="100" column="38" lean-forward="true" selection-start-line="100" selection-start-column="38" selection-end-line="100" selection-end-column="38" />
+        <state relative-caret-position="32">
+          <caret line="2" column="22" lean-forward="false" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/testEx/CommandScheduler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="800">
+          <caret line="53" column="23" lean-forward="true" selection-start-line="53" selection-start-column="23" selection-end-line="53" selection-end-column="23" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/testEx/Level.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="19" column="5" lean-forward="false" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
+        <state relative-caret-position="352">
+          <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/testEx/Run.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="19" column="10" lean-forward="false" selection-start-line="19" selection-start-column="10" selection-end-line="19" selection-end-column="10" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/testEx/CompressorClient.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="64">
-          <caret line="4" column="17" lean-forward="false" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+        <state relative-caret-position="112">
+          <caret line="7" column="14" lean-forward="true" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/testEx/MyCompressorClient.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
+        <state relative-caret-position="603">
           <caret line="39" column="0" lean-forward="true" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
           <folding />
         </state>

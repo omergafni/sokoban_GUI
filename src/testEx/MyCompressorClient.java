@@ -6,6 +6,42 @@ import java.net.Socket;
 public class MyCompressorClient implements CompressorClient {
 
     @Override
+    public String uncompress(String compress){
+        char compressedArray[] = compress.toCharArray();
+        char c;
+        int charCounter;
+        int arraySize = compressedArray.length;
+        StringBuilder sb = new StringBuilder();
+
+        for(int i = 0; i < arraySize; i+=2){
+            c = compressedArray[i];
+            if(c == '\n' || i+1 == arraySize) {
+                sb.append(c);
+                i--;
+            }
+            else {
+                charCounter = Character.getNumericValue(compressedArray[i+1]);
+                for(int j = 0; j < charCounter; j++){
+                    sb.append(c);
+                }
+            }
+        }
+        // save uncompressed data to a file:
+        try {
+            BufferedWriter out = new BufferedWriter(new FileWriter("c:/users/omer/desktop/output.txt"));
+            String[] str = sb.toString().split("\n");
+            for (String s : str) {
+                out.write(s);
+                out.newLine();
+            }
+            out.close();
+
+        } catch(IOException e) {e.printStackTrace();}
+
+        return sb.toString();
+    }
+
+    @Override
     public String compress(String uncompressed) {
 
         char stringArray[] = uncompressed.toCharArray();

@@ -15,7 +15,7 @@ public class Run {
         MyCompressorClient mc=new MyCompressorClient();
         if(!mc.compress(t1).equals("x1@3x1 6A1 4x1"))
             System.out.println("compress failure");
-
+        //System.out.println(mc.uncompress("x1@3x1 6A1 4x1\nx1@3x1 4B3 4x1\nx1 3x1 5>1 5x1\nx1 3<1 2B1x9\nx3 4B1 3B1 4x1\nx1@2 4B1 3B1 4x1\n"));
         //---------------------------------------------
         String[] output={
                 "x17",
@@ -179,6 +179,8 @@ public class Run {
         test4();
         gf[0]=false;
         System.out.println("end");
+
+
     }
 
 
