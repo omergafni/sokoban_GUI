@@ -128,8 +128,8 @@
       <file leaf-file-name="MyCompressorClient.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/testEx/MyCompressorClient.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="603">
-              <caret line="39" column="0" lean-forward="true" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+            <state relative-caret-position="555">
+              <caret line="36" column="24" lean-forward="true" selection-start-line="36" selection-start-column="24" selection-end-line="36" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -778,7 +778,14 @@
       <option name="project" value="LOCAL" />
       <updated>1488658444498</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="exam version 1.1">
+      <created>1488658473074</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1488658473074</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -858,7 +865,8 @@
     <MESSAGE value="v1.4" />
     <MESSAGE value="exam version" />
     <MESSAGE value="exam version 1.0" />
-    <option name="LAST_COMMIT_MESSAGE" value="exam version 1.0" />
+    <MESSAGE value="exam version 1.1" />
+    <option name="LAST_COMMIT_MESSAGE" value="exam version 1.1" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1303,8 +1311,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/testEx/MyCompressorClient.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="603">
-          <caret line="39" column="0" lean-forward="true" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+        <state relative-caret-position="555">
+          <caret line="36" column="24" lean-forward="true" selection-start-line="36" selection-start-column="24" selection-end-line="36" selection-end-column="24" />
           <folding />
         </state>
       </provider>
