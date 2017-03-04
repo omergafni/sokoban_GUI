@@ -84,13 +84,13 @@ public class Run {
         };
 
         MyPolicyImplementor p=new MyPolicyImplementor();
-        if(p.isLegal(t1, Direction.RIGHT))
+        if(p.isLegal(t1, Direction.right))
             System.out.println("failed1 right");
-        if(!p.isLegal(t1, Direction.UP))
+        if(!p.isLegal(t1, Direction.up))
             System.out.println("failed1 up");
-        if(p.isLegal(t1, Direction.LEFT))
+        if(p.isLegal(t1, Direction.left))
             System.out.println("failed1 left");
-        if(p.isLegal(t1, Direction.DOWN))
+        if(p.isLegal(t1, Direction.down))
             System.out.println("failed1 down");
 
         char[][] t2={
@@ -102,13 +102,13 @@ public class Run {
                 {'x','x','x','x','x'}
         };
 
-        if(!p.isLegal(t2, Direction.RIGHT))
+        if(!p.isLegal(t2, Direction.right))
             System.out.println("failed2 right");
-        if(p.isLegal(t2, Direction.UP))
+        if(p.isLegal(t2, Direction.up))
             System.out.println("failed2 up");
-        if(!p.isLegal(t2, Direction.LEFT))
+        if(!p.isLegal(t2, Direction.left))
             System.out.println("failed2 left");
-        if(!p.isLegal(t2, Direction.DOWN))
+        if(!p.isLegal(t2, Direction.down))
             System.out.println("failed2 down");
 
     }

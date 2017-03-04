@@ -9,8 +9,6 @@ import java.util.ArrayList;
 
 public class MyPolicyImplementor implements PolicyImplementor {
 
-
-
     @Override
     public boolean isLegal(char[][] level, Direction d) {
         model.data.level.Level myLevel = fromMatrixToLevel(level);
@@ -19,9 +17,6 @@ public class MyPolicyImplementor implements PolicyImplementor {
         return myPolicy.checkIfMovePossible(d);
 
     }
-
-
-
 
     public model.data.level.Level fromMatrixToLevel(char[][] matrix) {
         ArrayList<ArrayList<WorldObject>> grid = new ArrayList<>();

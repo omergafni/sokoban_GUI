@@ -54,10 +54,10 @@ public class MySokobanPolicy implements Policy {
 			return checkIfNeedPush(direction);
 
 		if (level.getAdjacent(player.getPosition(),direction).getWorldObjectType() == WorldObjectType.RIGHT_DOOR)
-			if (direction == Direction.RIGHT) return true;
+			if (direction == Direction.right) return true;
 
 		if (level.getAdjacent(player.getPosition(),direction).getWorldObjectType() == WorldObjectType.LEFT_DOOR)
-			if (direction == Direction.LEFT) return true;
+			if (direction == Direction.left) return true;
 
 
 		return true;
@@ -85,16 +85,16 @@ public class MySokobanPolicy implements Policy {
 		if (potentialBox.getWorldObjectType() == WorldObjectType.BOX) 
 		{
 			if (potentialLeftDoor.getWorldObjectType() == WorldObjectType.LEFT_DOOR) {
-				if (direction == Direction.LEFT) return true;
+				if (direction == Direction.left) return true;
 			}
 			if (potentialRightDoor.getWorldObjectType() == WorldObjectType.RIGHT_DOOR) {
-				if (direction == Direction.RIGHT) return true;
+				if (direction == Direction.right) return true;
 			}
 			if (potentialFloor.getWorldObjectType() == WorldObjectType.FLOOR || potentialFloor.getWorldObjectType() == WorldObjectType.TARGET)
 			{
-				if (potentialBox.isOnLeftDoor() && direction != Direction.LEFT)
+				if (potentialBox.isOnLeftDoor() && direction != Direction.left)
 					return false;
-				if (potentialBox.isOnRightDoor() && direction != Direction.RIGHT)
+				if (potentialBox.isOnRightDoor() && direction != Direction.right)
 					return false;
 				return true;
 			}

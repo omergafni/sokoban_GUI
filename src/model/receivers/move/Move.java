@@ -52,19 +52,19 @@ public class Move {
 		int y = (int)worldObject.getPosition().getY();
 
 		switch (direction) {
-			case UP: 	level.getGrid().get(x-1).set(y, worldObject);
+			case up: 	level.getGrid().get(x-1).set(y, worldObject);
 						worldObject.setPosition(new Point(x-1,y));
 						break;
 						
-			case DOWN:	level.getGrid().get(x+1).set(y, worldObject);
+			case down:	level.getGrid().get(x+1).set(y, worldObject);
 						worldObject.setPosition(new Point(x+1,y));
 						break;
 						
-			case LEFT:  level.getGrid().get(x).set(y-1, worldObject);
+			case left:  level.getGrid().get(x).set(y-1, worldObject);
 						worldObject.setPosition(new Point(x,y-1));
 						break;
 						
-			case RIGHT:	level.getGrid().get(x).set(y+1, worldObject);
+			case right:	level.getGrid().get(x).set(y+1, worldObject);
 						worldObject.setPosition(new Point(x,y+1));
 						break;
 		}

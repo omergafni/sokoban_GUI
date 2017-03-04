@@ -19,16 +19,16 @@ public class MoveCommand implements Command {
 
 		switch(params[1]) {
 		
-		case "up":	  this.direction = Direction.UP; 
+		case "up":	  this.direction = Direction.up;
 					  break;
 			 
-		case "down":  this.direction = Direction.DOWN;
+		case "down":  this.direction = Direction.down;
 					  break;
 			
-		case "right": this.direction = Direction.RIGHT;
+		case "right": this.direction = Direction.right;
 					  break;
 			
-		case "left":  this.direction = Direction.LEFT;
+		case "left":  this.direction = Direction.left;
 				      break;
 			
 		default:	  direction = null;

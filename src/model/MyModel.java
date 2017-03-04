@@ -27,16 +27,16 @@ public class MyModel extends Observable implements Model {
 		
 		switch(direction) {
 		
-		case UP:	policy.execute(moveUp);
+		case up:	policy.execute(moveUp);
 					break;
 			 
-		case DOWN:  policy.execute(moveDown);
+		case down:  policy.execute(moveDown);
 					break;
 			
-		case RIGHT: policy.execute(moveRight);
+		case right: policy.execute(moveRight);
 					break;
 			
-		case LEFT:  policy.execute(moveLeft);
+		case left:  policy.execute(moveLeft);
 				   	break;
 			
 		default:	  System.out.println("invalid direction");
@@ -55,10 +55,10 @@ public class MyModel extends Observable implements Model {
 		this.level = level;
 		policy = new MySokobanPolicy(level);
 	
-		moveUp = new Move(level,level.getPlayer(),Direction.UP);
-		moveDown = new Move(level,level.getPlayer(),Direction.DOWN);
-		moveLeft = new Move(level,level.getPlayer(),Direction.LEFT);
-		moveRight = new Move(level,level.getPlayer(),Direction.RIGHT);
+		moveUp = new Move(level,level.getPlayer(),Direction.up);
+		moveDown = new Move(level,level.getPlayer(),Direction.down);
+		moveLeft = new Move(level,level.getPlayer(),Direction.left);
+		moveRight = new Move(level,level.getPlayer(),Direction.right);
 		
 		setChanged();
 		notifyObservers("display");

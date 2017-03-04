@@ -56,7 +56,7 @@ public class MyCompressorClient implements CompressorClient {
         compressed = compress(uncompressed);
 
         Socket theServer = new Socket(ip,port);
-        System.out.println("connected to server!");
+        //System.out.println("connected to server!");
         PrintWriter outToServer = new PrintWriter(theServer.getOutputStream());
         BufferedReader inFromServer = new BufferedReader(new InputStreamReader(theServer.getInputStream()));
 

@@ -11,6 +11,7 @@ public class CommandScheduler {
     PriorityQueue<Command> commandQueue;
     Timer timer;
     boolean stop = false;
+    Thread thread;
 
     public CommandScheduler () {
 
@@ -30,11 +31,12 @@ public class CommandScheduler {
     }
     public void insertCommand(Command c){
         commandQueue.add(c);
+        //thread.interrupt();
     }
 
 
     public void start(){
-        new Thread(new Runnable() {
+        thread = new Thread(new Runnable() {
             @Override
             public void run() {
                 while(!stop) {
@@ -48,7 +50,8 @@ public class CommandScheduler {
                 }
             }
 
-        }).start();
+        });
+        thread.start();
     }
 
     public void stop(){

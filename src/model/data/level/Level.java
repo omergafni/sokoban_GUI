@@ -102,13 +102,13 @@ public class Level implements Serializable {
 		
 		switch (direction) {
 		
-			case UP:	return 	grid.get(x-1).get(y);	
+			case up:	return 	grid.get(x-1).get(y);
 			
-			case DOWN:	return 	grid.get(x+1).get(y);	
+			case down:	return 	grid.get(x+1).get(y);
 			
-			case LEFT:	return 	grid.get(x).get(y-1);
+			case left:	return 	grid.get(x).get(y-1);
 			
-			case RIGHT:	return 	grid.get(x).get(y+1);
+			case right:	return 	grid.get(x).get(y+1);
 			
 			default:	return null;
 		} 
