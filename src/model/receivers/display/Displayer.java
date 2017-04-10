@@ -6,5 +6,5 @@ public interface Displayer {
 
 	void display() throws Exception;
 	void setLevel(Level level);
-	
+	Level getLevel();
 }

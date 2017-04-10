@@ -28,6 +28,7 @@ public class MyTextLevelLoader implements LevelLoader{
 
 			for(int j = 0; j < line.length(); j++)
 			{
+
 				if (line.charAt(j) == 'x')
 					grid.get(i).add(new Wall(new Point(i,j)));
 				if (line.charAt(j) == 'B' || line.charAt(j) == 'b')

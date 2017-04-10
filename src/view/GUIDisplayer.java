@@ -39,13 +39,13 @@ public class GUIDisplayer extends Canvas implements Displayer
 				if(c == ' '){
 					gc.drawImage(floor,cellWidth*j, cellHeight*i, cellWidth, cellHeight);
 				}
-				if(c == '#'){
+				if(c == 'x'){
 					gc.drawImage(wall,cellWidth*j, cellHeight*i, cellWidth, cellHeight);
 				}
-				if(c == 'o'){
+				if(c == '@'){
 					gc.drawImage(target,cellWidth*j, cellHeight*i, cellWidth, cellHeight);
 				}
-				if(c == '@'){
+				if(c == 'B' || c == 'b'){
 					gc.drawImage(box,cellWidth*j, cellHeight*i, cellWidth, cellHeight);
 				}
 				if(c == 'A'){
@@ -79,5 +79,8 @@ public class GUIDisplayer extends Canvas implements Displayer
 		maxHeight = level.getMaxHeight();
 		maxWidth = level.getMaxWidth();
 	}
+
+	@Override
+	public Level getLevel(){return this.level;}
 
 }

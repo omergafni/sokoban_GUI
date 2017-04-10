@@ -37,10 +37,10 @@ public class MyModel extends Observable implements Model {
 					break;
 			
 		case left:  policy.execute(moveLeft);
-				   	break;
+					break;
 			
-		default:	  System.out.println("invalid direction");
-					  break;
+		default:	System.out.println("invalid direction");
+					break;
 		}		
 		setChanged();
 		notifyObservers("display");

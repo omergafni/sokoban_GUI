@@ -2,9 +2,9 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.*?>
-<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.*?>
 <?import view.GUIDisplayer?>
-<BorderPane xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.MyView">
+<BorderPane xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.MyView">
    <top>
       <MenuBar BorderPane.alignment="CENTER">
         <menus>
@@ -20,6 +20,7 @@
                     <MenuItem mnemonicParsing="false" onAction="#restartLevel" text="Restart loaded level" />
                     <MenuItem mnemonicParsing="false" onAction="#playMusic" text="Play music" />
                     <MenuItem mnemonicParsing="false" onAction="#pauseMusic" text="Pause music" />
+                  <MenuItem mnemonicParsing="false" onAction="#showScoreTable" text="Scores Table" />
 
               </items>
             </Menu>
@@ -40,5 +41,17 @@
 
    </center>
    <bottom>
-    </bottom>
+      <SplitPane dividerPositions="0.5" prefHeight="27.0" prefWidth="510.0" BorderPane.alignment="CENTER">
+         <items>
+            <Label fx:id="timer" prefHeight="17.0" prefWidth="250.0" textAlignment="CENTER">
+               <padding>
+                  <Insets left="10.0" />
+               </padding></Label>
+            <Label fx:id="counter" prefHeight="17.0" prefWidth="247.0" textAlignment="CENTER">
+               <padding>
+                  <Insets left="10.0" />
+               </padding></Label>
+         </items>
+      </SplitPane>
+   </bottom>
 </BorderPane>

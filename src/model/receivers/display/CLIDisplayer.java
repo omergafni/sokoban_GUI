@@ -18,7 +18,12 @@ public class CLIDisplayer implements Displayer{
 
 	@Override
 	public void setLevel(Level level) {this.level = level;}
-	
+
+	@Override
+	public Level getLevel() {
+		return level;
+	}
+
 	@Override
 	public void display() {
 		

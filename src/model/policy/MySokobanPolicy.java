@@ -27,13 +27,15 @@ public class MySokobanPolicy implements Policy {
 			{
 				push((Box)level.getAdjacent(player.getPosition(), direction),direction);
 				moveCommand.move();
-			}
+                level.setStepsCounter(level.getStepsCounter()+1);
+            }
 			else 
 			{
 				moveCommand.move();
-			}
+                level.setStepsCounter(level.getStepsCounter()+1);
+            }
 		}
-		level.setStepsCounter(level.getStepsCounter()+1);
+		System.out.println(level.getStepsCounter());
 	}
 	
 	private void push(Box box, Direction direction) {

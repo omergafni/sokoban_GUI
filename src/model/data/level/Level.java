@@ -12,13 +12,14 @@ import java.util.ArrayList;
 @SuppressWarnings("serial")
 public class Level implements Serializable {
 
+	private String levelName;
 	private ArrayList<ArrayList<WorldObject>> grid;
 	private ArrayList<Point> solutionCoordinates = new ArrayList<>();
 	private Player player = null;
 	private int maxHeight;
 	private int maxWidth;
 	private int stepsCounter;
-	private int timer;
+	private int timer; //??????
 	private char[][] levelAsChar = null;
 
 	public Level() {}
@@ -134,6 +135,10 @@ public class Level implements Serializable {
 
 	public int getTimer() {return timer;}
 	public void setTimer(int timer) {this.timer = timer;}
+
+
+	public String getLevelName() {return levelName;}
+	public void setLevelName(String levelName) {this.levelName = levelName;}
 
 }
 
