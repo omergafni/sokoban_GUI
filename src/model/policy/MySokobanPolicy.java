@@ -2,7 +2,7 @@ package model.policy;
 
 import model.data.level.Level;
 import model.data.worldObjects.Box;
-import model.data.worldObjects.Player;
+import model.data.worldObjects.Character;
 import model.data.worldObjects.WorldObject;
 import model.data.worldObjects.WorldObjectType;
 import model.receivers.move.Direction;
@@ -11,10 +11,10 @@ import model.receivers.move.Move;
 public class MySokobanPolicy implements Policy {
 
 	private Level level;
-	private Player player;
+	private Character character;
 	private Direction direction;
 
-	public MySokobanPolicy(Level level) {this.level = level; this.player = level.getPlayer();}
+	public MySokobanPolicy(Level level) {this.level = level; this.character = level.getCharacter();}
 	
 	@Override
 	public void execute(Move moveCommand) throws Exception {
@@ -25,7 +25,7 @@ public class MySokobanPolicy implements Policy {
 		{
 			if (checkIfNeedPush(direction))
 			{
-				push((Box)level.getAdjacent(player.getPosition(), direction),direction);
+				push((Box)level.getAdjacent(character.getPosition(), direction),direction);
 				moveCommand.move();
                 level.setStepsCounter(level.getStepsCounter()+1);
             }
@@ -35,7 +35,7 @@ public class MySokobanPolicy implements Policy {
                 level.setStepsCounter(level.getStepsCounter()+1);
             }
 		}
-		System.out.println(level.getStepsCounter());
+		//System.out.println(level.getStepsCounter());
 	}
 	
 	private void push(Box box, Direction direction) {
@@ -49,16 +49,16 @@ public class MySokobanPolicy implements Policy {
 	}
 
 	public boolean checkIfMovePossible(Direction direction) {
-		if (wallCollision(player,direction))
+		if (wallCollision(character,direction))
 			return false;
 
-		if (level.getAdjacent(player.getPosition(),direction).getWorldObjectType() == WorldObjectType.BOX)
+		if (level.getAdjacent(character.getPosition(),direction).getWorldObjectType() == WorldObjectType.BOX)
 			return checkIfNeedPush(direction);
 
-		if (level.getAdjacent(player.getPosition(),direction).getWorldObjectType() == WorldObjectType.RIGHT_DOOR)
+		if (level.getAdjacent(character.getPosition(),direction).getWorldObjectType() == WorldObjectType.RIGHT_DOOR)
 			if (direction == Direction.right) return true;
 
-		if (level.getAdjacent(player.getPosition(),direction).getWorldObjectType() == WorldObjectType.LEFT_DOOR)
+		if (level.getAdjacent(character.getPosition(),direction).getWorldObjectType() == WorldObjectType.LEFT_DOOR)
 			if (direction == Direction.left) return true;
 
 
@@ -67,10 +67,10 @@ public class MySokobanPolicy implements Policy {
 
 	/*
 	public boolean checkIfMovePossible() {
-		if (wallCollision(player,direction))
+		if (wallCollision(character,direction))
 			return false;
 
-		if (level.getAdjacent(player.getPosition(),direction).getWorldObjectType() == WorldObjectType.BOX)
+		if (level.getAdjacent(character.getPosition(),direction).getWorldObjectType() == WorldObjectType.BOX)
 			return checkIfNeedPush();
 		
 		return true;
@@ -78,7 +78,7 @@ public class MySokobanPolicy implements Policy {
 	*/
 	private boolean checkIfNeedPush(Direction direction) {
 		
-		WorldObject potentialBox = level.getAdjacent(player.getPosition(),direction);
+		WorldObject potentialBox = level.getAdjacent(character.getPosition(),direction);
 		WorldObject potentialFloor = level.getAdjacent(potentialBox.getPosition(),direction);
 		WorldObject potentialRightDoor = level.getAdjacent(potentialBox.getPosition(),direction);
 		WorldObject potentialLeftDoor = level.getAdjacent(potentialBox.getPosition(),direction);

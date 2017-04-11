@@ -55,10 +55,10 @@ public class MyModel extends Observable implements Model {
 		this.level = level;
 		policy = new MySokobanPolicy(level);
 	
-		moveUp = new Move(level,level.getPlayer(),Direction.up);
-		moveDown = new Move(level,level.getPlayer(),Direction.down);
-		moveLeft = new Move(level,level.getPlayer(),Direction.left);
-		moveRight = new Move(level,level.getPlayer(),Direction.right);
+		moveUp = new Move(level,level.getCharacter(),Direction.up);
+		moveDown = new Move(level,level.getCharacter(),Direction.down);
+		moveLeft = new Move(level,level.getCharacter(),Direction.left);
+		moveRight = new Move(level,level.getCharacter(),Direction.right);
 		
 		setChanged();
 		notifyObservers("display");

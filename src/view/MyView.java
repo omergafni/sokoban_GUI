@@ -11,7 +11,9 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextInputDialog;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
@@ -24,7 +26,9 @@ import model.receivers.display.Displayer;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
+import java.sql.Time;
 import java.util.Observable;
+import java.util.Optional;
 import java.util.ResourceBundle;
 
 public class MyView extends Observable implements View, Initializable {
@@ -34,14 +38,13 @@ public class MyView extends Observable implements View, Initializable {
 	@FXML private Label counter;
 	@FXML private Label timer;
 	private Timeline timeline;
-	int seconds, minutes,hours;
+	private int seconds, minutes, hours;
 
 
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 
         showSteps();
-	    startTimer();
 	    loadAndPlayMusic();
 		GUIDisplayer.showLogo();
 		GUIDisplayer.addEventFilter(MouseEvent.MOUSE_CLICKED, (e)->{ GUIDisplayer.requestFocus(); });
@@ -100,6 +103,8 @@ public class MyView extends Observable implements View, Initializable {
 		setChanged();
 		notifyObservers(loadCommand);
 		System.out.println("load command sent: " + loadCommand);
+		stopTimer();
+		startTimer();
 	}
 
 	public void saveLevel() {
@@ -137,11 +142,13 @@ public class MyView extends Observable implements View, Initializable {
 				alert.showAndWait();
 			}
 			else if(e.getMessage().equals("good job..")) {
+				pauseTimer();
 				Alert alert = new Alert(Alert.AlertType.INFORMATION);
 				alert.setTitle("Level Completed");
 				alert.setHeaderText("Level is completed!");
 				alert.setContentText(e.getMessage());
 				alert.showAndWait();
+				saveScore();
 			}
 			else {
 				Alert alert = new Alert(Alert.AlertType.ERROR);
@@ -151,6 +158,29 @@ public class MyView extends Observable implements View, Initializable {
 				alert.showAndWait();
 			}
 		});
+	}
+
+	public void saveScore() {
+		Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+		alert.setTitle("High Score Table");
+		alert.setHeaderText("Save your score to database!");
+		alert.setContentText("Would you like to save your score for this level?");
+		Optional<ButtonType> result = alert.showAndWait();
+		if(result.get() == ButtonType.OK){
+			TextInputDialog dialog = new TextInputDialog();
+			dialog.setTitle("High Score Table");
+			dialog.setContentText("Please enter your name");
+			Optional<String> userName = dialog.showAndWait();
+			if(userName.isPresent()){
+				setChanged();
+				notifyObservers("saveScore "+userName.get());
+			}
+		}
+		else {
+			alert.close();
+		}
+
+
 	}
 
 	public void about() {
@@ -166,6 +196,8 @@ public class MyView extends Observable implements View, Initializable {
 	public void restartLevel() {
 		setChanged();
 		notifyObservers("restart");
+		stopTimer();
+		startTimer();
 	}
 
 	public void pauseMusic() {mediaPlayer.pause();}
@@ -184,6 +216,17 @@ public class MyView extends Observable implements View, Initializable {
         timeline.setCycleCount(Animation.INDEFINITE);
         timeline.play();
     }
+
+    public void pauseTimer() {timeline.pause();}
+
+    public void stopTimer() {
+		if(timeline != null) timeline.stop();
+		this.minutes = 0;
+		this.seconds = 0;
+		this.hours = 0;
+	}
+
+	public Time getTimeStamp(){return new Time(this.hours,this.minutes,this.seconds);}
 
     private void timeDuration() {
         if (seconds < 59) {
@@ -217,10 +260,16 @@ public class MyView extends Observable implements View, Initializable {
     }
 
     public void showScoreTable(){
+    	if(GUIDisplayer.getLevel() == null) {
+			passException(new Exception("Load level first.."));
+			return;
+    	}
     	Platform.runLater( () -> {
 			try {
     			FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("HighScoresWindow.fxml"));
 				Parent root = fxmlLoader.load();
+				HighScoresWindowController c = fxmlLoader.getController();
+				c.buildData(this.GUIDisplayer.getLevel().getLevelName());
 				Stage stage = new Stage();
 				stage.setScene(new Scene(root));
 				stage.setTitle("High Scores");

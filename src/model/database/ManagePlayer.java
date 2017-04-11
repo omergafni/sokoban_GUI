@@ -1,4 +1,4 @@
-package view;
+package model.database;
 
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
@@ -16,12 +16,10 @@ import java.util.Set;
 public class ManagePlayer {
 
     private static final SessionFactory factory;
-    //private static SessionFactory factory;
-
 
     static {
         try {
-            factory = new Configuration().configure("view/hibernate.cfg.xml").buildSessionFactory();
+            factory = new Configuration().configure("hibernate.cfg.xml").buildSessionFactory();
         } catch (Throwable ex) {
             throw new ExceptionInInitializerError(ex);
         }
@@ -31,37 +29,37 @@ public class ManagePlayer {
         return factory.openSession();
     }
 
-    public static void main(final String[] args) throws Exception {
-        /*
-        try {
-            factory = new Configuration().configure("view/hibernate.cfg.xml").buildSessionFactory();
-        } catch (Throwable ex) {
-            throw new ExceptionInInitializerError(ex);
-        }
-        */
-        ManagePlayer mp = new ManagePlayer();
+/*
+     public static void main(final String[] args) throws Exception {
 
-        /*
+        ManagePlayer mp = new ManagePlayer();
+        //--------------------------------------
         HashSet<Score> set1 = new HashSet();
         HashSet<Score> set2 = new HashSet();
-        set1.add(new Score(new Time(0,4,34),6756));
-        set2.add(new Score(new Time(0,45,3),765));
+        set1.add(new Score(new Time(0,4,34),6756,"level1"));
+        set2.add(new Score(new Time(0,45,3),765,"level1"));
         mp.addPlayer("Moshe",set1);
         mp.addPlayer("Shimshon",set2);
-        */
-        mp.updateScore(1,new Score(new Time(2,3,4),555));
+        //--------------------------------------
+        //mp.updateScore(1,new Score(new Time(2,3,4),555));
+        HashSet<Score> set3 = new HashSet();
+        set3.add(new Score(new Time(00,05,23),111,"level2"));
+        mp.addPlayer("Omer",set3);
         mp.listPlayers();
 
     }
-
-    public Integer addPlayer(String name, Set scores) {
+*/
+    public Integer addPlayer(String name, Score score/*Set scores*/) {
         Session session = factory.openSession();
         Transaction tx = null;
         Integer playerId = null;
         try {
             tx = session.beginTransaction();
             Player p = new Player(name);
-            p.setScores(scores);
+            score.setPlayer(p);
+            HashSet<Score> set = new HashSet<>();
+            set.add(score);
+            p.setScores(set);
             playerId = (Integer)session.save(p);
             tx.commit();
 
@@ -116,11 +114,11 @@ public class ManagePlayer {
 
     }
 
-    public List selectFrom(String s) {
+    public List select(String s) {
 
         Session session = factory.openSession();
         Transaction tx = session.beginTransaction();
-        List list = session.createQuery("FROM " + s).list();
+        List list = session.createQuery(s).list();
 
         return list;
     }

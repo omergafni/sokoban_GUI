@@ -3,6 +3,7 @@ package model.receivers.load;
 import model.data.level.Level;
 import model.data.level.MyTextLevelLoader;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 
@@ -13,6 +14,7 @@ public class LoadTextLevel implements LoadLevel {
 		
 		MyTextLevelLoader loader = new MyTextLevelLoader();
 		Level level = loader.loadLevel(new FileInputStream(path));
+		level.setLevelName(path.substring(path.lastIndexOf(File.separator)+1));
 		return level;
 	
 	}		

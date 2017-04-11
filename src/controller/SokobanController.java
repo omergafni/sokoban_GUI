@@ -4,7 +4,6 @@ import controller.commands.*;
 import controller.server.MyServer;
 import model.Model;
 import model.MyModel;
-import model.receivers.display.CLIDisplayer;
 import view.MyView;
 import view.View;
 
@@ -45,6 +44,7 @@ public class SokobanController implements Controller, Observer {
 		commands.put("exit", new ExitCommand(this));
 		commands.put("display", new DisplayCommand(model,myView/*myView.getGUIDisplayer()*/));
 		commands.put("restart",new RestartLevelCommand(myModel));
+		commands.put("savescore",new SaveScoreCommand(myView,myModel));
 		start();
 	}
 	

@@ -1,6 +1,6 @@
 package model.data.level;
 
-import model.data.worldObjects.Player;
+import model.data.worldObjects.Character;
 import model.data.worldObjects.WorldObject;
 import model.data.worldObjects.WorldObjectType;
 import model.receivers.move.Direction;
@@ -15,11 +15,11 @@ public class Level implements Serializable {
 	private String levelName;
 	private ArrayList<ArrayList<WorldObject>> grid;
 	private ArrayList<Point> solutionCoordinates = new ArrayList<>();
-	private Player player = null;
+	private Character character = null;
 	private int maxHeight;
 	private int maxWidth;
 	private int stepsCounter;
-	private int timer; //??????
+	//private int timer; //??????
 	private char[][] levelAsChar = null;
 
 	public Level() {}
@@ -27,8 +27,8 @@ public class Level implements Serializable {
 		try 
 		{			
 			this.grid = grid;
-			Point tempPlayerPosition = getPlayer().getPosition();
-			this.setPlayer(new Player(tempPlayerPosition,false,false,false));
+			Point tempPlayerPosition = getCharacter().getPosition();
+			this.setCharacter(new Character(tempPlayerPosition,false,false,false));
 			findWidthHeight();
 			findSolCoordinates();
 			this.stepsCounter = 0;
@@ -45,22 +45,22 @@ public class Level implements Serializable {
 			}
 	}
 	
-	public Player getPlayer() {
-		if (player != null)
+	public Character getCharacter() {
+		if (character != null)
 		{
-			return player;
+			return character;
 		}
 		for (int i = 0; i < grid.size(); i++)
 		{
 			for (int j = 0; j < grid.get(i).size(); j++)
 			{
 				if (grid.get(i).get(j).getWorldObjectType() == WorldObjectType.PLAYER)
-					return ((Player)grid.get(i).get(j));
+					return ((Character)grid.get(i).get(j));
 			}
 		}
 		return null;
 	}
-	private void setPlayer(Player player) {this.player = player;}
+	private void setCharacter(Character character) {this.character = character;}
 	
 	public final ArrayList<ArrayList<WorldObject>> getGrid() {return grid;}
 	public void setGrid(ArrayList<ArrayList<WorldObject>> grid) {this.grid = grid;}
@@ -133,8 +133,8 @@ public class Level implements Serializable {
 	public int getStepsCounter() {return stepsCounter;}
 	public void setStepsCounter(int stepsCounter) {this.stepsCounter = stepsCounter;}
 
-	public int getTimer() {return timer;}
-	public void setTimer(int timer) {this.timer = timer;}
+	//public int getTimer() {return timer;}
+	//public void setTimer(int timer) {this.timer = timer;}
 
 
 	public String getLevelName() {return levelName;}

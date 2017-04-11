@@ -1,6 +1,7 @@
 package model.data.level;
 
 import model.data.worldObjects.*;
+import model.data.worldObjects.Character;
 
 import java.awt.*;
 import java.io.*;
@@ -42,11 +43,11 @@ public class MyTextLevelLoader implements LevelLoader{
 				if (line.charAt(j) == ' ')
 					grid.get(i).add(new Floor(new Point(i,j)));
 				if (line.charAt(j) == 'A')
-					grid.get(i).add(new Player(new Point(i,j),false,false,false));
+					grid.get(i).add(new Character(new Point(i,j),false,false,false));
 				if (line.charAt(j) == 'l')
-					grid.get(i).add(new Player(new Point(i,j),true,false,false));
+					grid.get(i).add(new Character(new Point(i,j),true,false,false));
 				if (line.charAt(j) == 'r')
-					grid.get(i).add(new Player(new Point(i,j),false,true,false));
+					grid.get(i).add(new Character(new Point(i,j),false,true,false));
 				if (line.charAt(j) == '>')
 					grid.get(i).add(new RightDoor(new Point(i,j)));
 				if (line.charAt(j) == '<')
@@ -61,7 +62,7 @@ public class MyTextLevelLoader implements LevelLoader{
 				if (line.charAt(j) == ' ')
 					grid.get(i).add(new Floor(new Point(i,j)));
 				if (line.charAt(j) == 'A')
-					grid.get(i).add(new Player(new Point(i,j)));
+					grid.get(i).add(new Character(new Point(i,j)));
 				*/
 			}
 			i++;

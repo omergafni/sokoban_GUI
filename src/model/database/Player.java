@@ -1,15 +1,20 @@
-package view;
+package model.database;
 
 import javax.persistence.*;
 import java.util.Set;
 
-
+@Entity
+@Table(name ="Players")
 public class Player {
 
-
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     private int id;
+    @Column(name = "name")
     private String name;
-    private Set scores;
+    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "player")
+    private Set<Score> scores; //init?
 
     public Player() {}
     public Player(String name) {

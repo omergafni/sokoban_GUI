@@ -10,9 +10,11 @@
         <property name="connection.url">jdbc:mysql://localhost/level_scores</property>
         <property name="connection.username">root</property>
         <property name="connection.password">1234</property>
-        <mapping resource="view/Player.hbm.xml"/>
-        <!-- DB schema will be updated if needed -->
-        <!-- <property name="hbm2ddl.auto">update</property> -->
+        <property name="hibernate.id.new_generator_mappings">false</property>
+        <!-- mapping resource="Player.hbm.xml"/ -->
+        <mapping class="model.database.Player"/>
+        <mapping class="model.database.Score"/>
+
 
     </session-factory>
 </hibernate-configuration>
