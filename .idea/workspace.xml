@@ -432,7 +432,7 @@
     <property name="GoToClass.includeLibraries" value="false" />
     <property name="dynamic.classpath" value="false" />
     <property name="MemberChooser.copyJavadoc" value="false" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
     <property name="last_opened_file_path" value="C:/Program Files (x86)/Oracle/JavaFX Scene Builder 1.1/JavaFX Scene Builder 1.1.exe" />
     <property name="ChangesBrowser.SHOW_FLATTEN" value="false" />
     <property name="GenerateAntBuildDialog.enableUiFormCompile" value="true" />
@@ -1030,7 +1030,7 @@
       <workItem from="1490683258578" duration="12909000" />
       <workItem from="1491814945501" duration="18318000" />
       <workItem from="1491837797772" duration="535000" />
-      <workItem from="1491838368571" duration="19860000" />
+      <workItem from="1491838368571" duration="19880000" />
     </task>
     <task id="LOCAL-00001" summary="v1.0">
       <created>1485084867821</created>
@@ -1116,11 +1116,18 @@
       <option name="project" value="LOCAL" />
       <updated>1491906834774</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="ms3">
+      <created>1491906842332</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1491906842332</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="86534000" />
+    <option name="totallyTimeSpent" value="86554000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
