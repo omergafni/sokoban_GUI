@@ -35,7 +35,7 @@
     </SUITE>
   </component>
   <component name="CreatePatchCommitExecutor">
-    <option name="PATCH_PATH" value="" />
+    <option name="PATCH_PATH" value="C:\Users\Omer\workspace\sokoban_gui" />
   </component>
   <component name="DatabaseView">
     <option name="GROUP_SCHEMA" value="true" />
@@ -255,6 +255,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <push-targets>
+      <push-target-info repo="$PROJECT_DIR$" source="master" target-remote="origin" target-branch="master" />
+    </push-targets>
   </component>
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
@@ -1030,7 +1033,7 @@
       <workItem from="1490683258578" duration="12909000" />
       <workItem from="1491814945501" duration="18318000" />
       <workItem from="1491837797772" duration="535000" />
-      <workItem from="1491838368571" duration="19880000" />
+      <workItem from="1491838368571" duration="19950000" />
     </task>
     <task id="LOCAL-00001" summary="v1.0">
       <created>1485084867821</created>
@@ -1123,11 +1126,18 @@
       <option name="project" value="LOCAL" />
       <updated>1491906842332</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="ms3">
+      <created>1491906862140</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1491906862140</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="86554000" />
+    <option name="totallyTimeSpent" value="86624000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
