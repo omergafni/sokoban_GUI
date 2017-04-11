@@ -10,35 +10,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/sokoban_gui/model/data/worldObjects/Player.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/sokoban_gui/view/application.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Player.hbm.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/view/application.css" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/model/data/worldObjects/Player.java" afterPath="$PROJECT_DIR$/src/model/data/worldObjects/Character.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/view/ManagePlayer.java" afterPath="$PROJECT_DIR$/src/model/database/ManagePlayer.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/view/Player.java" afterPath="$PROJECT_DIR$/src/model/database/Player.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/view/Score.java" afterPath="$PROJECT_DIR$/src/model/database/Score.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/view/hibernate.cfg.xml" afterPath="$PROJECT_DIR$/src/hibernate.cfg.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/sokoban_gui/controller/SokobanController.class" afterPath="$PROJECT_DIR$/out/production/sokoban_gui/controller/SokobanController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/sokoban_gui/model/MyModel.class" afterPath="$PROJECT_DIR$/out/production/sokoban_gui/model/MyModel.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/sokoban_gui/model/data/level/Level.class" afterPath="$PROJECT_DIR$/out/production/sokoban_gui/model/data/level/Level.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/sokoban_gui/model/data/level/MyTextLevelLoader.class" afterPath="$PROJECT_DIR$/out/production/sokoban_gui/model/data/level/MyTextLevelLoader.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/sokoban_gui/model/policy/MySokobanPolicy.class" afterPath="$PROJECT_DIR$/out/production/sokoban_gui/model/policy/MySokobanPolicy.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/sokoban_gui/model/receivers/load/LoadTextLevel.class" afterPath="$PROJECT_DIR$/out/production/sokoban_gui/model/receivers/load/LoadTextLevel.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/sokoban_gui/view/MyView$1.class" afterPath="$PROJECT_DIR$/out/production/sokoban_gui/view/MyView$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/sokoban_gui/view/MyView.class" afterPath="$PROJECT_DIR$/out/production/sokoban_gui/view/MyView.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/5c061fed-c15f-4241-be50-0838f6638ab4.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/5c061fed-c15f-4241-be50-0838f6638ab4.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/view/Player.hbm.xml" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sokoban_gui.iml" afterPath="$PROJECT_DIR$/sokoban_gui.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/controller/SokobanController.java" afterPath="$PROJECT_DIR$/src/controller/SokobanController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/MyModel.java" afterPath="$PROJECT_DIR$/src/model/MyModel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/data/level/Level.java" afterPath="$PROJECT_DIR$/src/model/data/level/Level.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/data/level/MyTextLevelLoader.java" afterPath="$PROJECT_DIR$/src/model/data/level/MyTextLevelLoader.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/policy/MySokobanPolicy.java" afterPath="$PROJECT_DIR$/src/model/policy/MySokobanPolicy.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/receivers/load/LoadTextLevel.java" afterPath="$PROJECT_DIR$/src/model/receivers/load/LoadTextLevel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/view/HighScoresWindow.fxml" afterPath="$PROJECT_DIR$/src/view/HighScoresWindow.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/view/HighScoresWindowController.java" afterPath="$PROJECT_DIR$/src/view/HighScoresWindowController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/view/MyView.java" afterPath="$PROJECT_DIR$/src/view/MyView.java" />
     </list>
     <list id="14a69492-4d72-4884-a0d1-7c9632f8f3c1" name="Rejected commit: Default" comment="v1.0" />
     <ignored path="JavaFxApplication.iws" />
@@ -1204,7 +1177,7 @@
       <workItem from="1490683258578" duration="12909000" />
       <workItem from="1491814945501" duration="18318000" />
       <workItem from="1491837797772" duration="535000" />
-      <workItem from="1491838368571" duration="58972000" />
+      <workItem from="1491838368571" duration="59032000" />
     </task>
     <task id="LOCAL-00001" summary="v1.0">
       <created>1485084867821</created>
@@ -1311,11 +1284,18 @@
       <option name="project" value="LOCAL" />
       <updated>1491906960467</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="ms3">
+      <created>1491946959720</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1491946959720</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="125646000" />
+    <option name="totallyTimeSpent" value="125706000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
