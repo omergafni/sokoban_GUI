@@ -47,7 +47,8 @@ public class SokobanController implements Controller, Observer {
 		commands.put("savescore",new SaveScoreCommand(myView,myModel));
 		start();
 	}
-	
+
+
 	public SokobanController(Model model, MyServer server) {
 		this.myModel = (MyModel)model;
 		this.myView = null;

@@ -6,7 +6,6 @@ import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
 
-import java.sql.Time;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
@@ -19,7 +18,7 @@ public class ManagePlayer {
 
     static {
         try {
-            factory = new Configuration().configure("hibernate.cfg.xml").buildSessionFactory();
+            factory = new Configuration().configure("resources/hibernate.cfg.xml").buildSessionFactory();
         } catch (Throwable ex) {
             throw new ExceptionInInitializerError(ex);
         }

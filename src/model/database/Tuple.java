@@ -8,9 +8,10 @@ public class Tuple {
     private Time time;
     private int steps;
     private String levelName;
+    private String playerName;
 
     public Tuple() {}
-    public Tuple(String name, Time time, int steps) {this.name = name; this.time = time; this.steps = steps;}
+    //public Tuple(String name, Time time, int steps) {this.name = name; this.time = time; this.steps = steps;}
 
     public String getName() {return name;}
     public void setName(String name) {this.name = name;}
@@ -23,5 +24,9 @@ public class Tuple {
 
     public String getLevelName() {return levelName;}
     public void setLevelName(String levelName) {this.levelName = levelName;}
+
+    public String getPlayerName() {return playerName;}
+    public void setPlayerName(String playerName) {this.playerName = playerName;}
+
 
 }

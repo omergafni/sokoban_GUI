@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
 
-<BorderPane prefHeight="324.0" prefWidth="393.0" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.HighScoresWindowController">
+<BorderPane prefHeight="428.0" prefWidth="394.0" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.HighScoresWindowController">
    <center>
-      <TableView fx:id="table" prefHeight="200.0" prefWidth="348.0" BorderPane.alignment="CENTER">
+      <TableView fx:id="table" prefHeight="277.0" prefWidth="393.0" BorderPane.alignment="CENTER">
         <columns>
             <TableColumn fx:id="columnName" prefWidth="151.0" text="Player Name" />
           <TableColumn fx:id="columnTime" text="Time" />
@@ -17,6 +19,16 @@
       </TableView>
    </center>
    <top>
-      <TextField promptText="Enter player name" BorderPane.alignment="CENTER" />
+      <TextField fx:id="filterField" promptText="Insert player name to filter.." BorderPane.alignment="CENTER" />
    </top>
+   <bottom>
+      <Pane prefHeight="71.0" prefWidth="393.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextField fx:id="searchPlayerField" layoutX="14.0" layoutY="8.0" promptText="Insert player name.." />
+            <TextField fx:id="searchLevelField" layoutX="14.0" layoutY="40.0" promptText="Insert level name.." />
+            <Button fx:id="searchPlayerButton" layoutX="171.0" layoutY="8.0" mnemonicParsing="false" text="search player" />
+            <Button fx:id="searchLevelButton" layoutX="171.0" layoutY="40.0" mnemonicParsing="false" text="search level" />
+         </children>
+      </Pane>
+   </bottom>
 </BorderPane>

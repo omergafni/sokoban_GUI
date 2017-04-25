@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane prefHeight="324.0" prefWidth="393.0" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.LevelScoresWindowController">
+   <center>
+      <TableView fx:id="table" prefHeight="324.0" prefWidth="352.0" BorderPane.alignment="CENTER">
+        <columns>
+            <TableColumn fx:id="columnPlayerName" prefWidth="140.0" text="Player name" />
+          <TableColumn fx:id="columnTime" prefWidth="128.0" text="Time" />
+          <TableColumn fx:id="columnSteps" prefWidth="124.0" text="Steps" />
+
+        </columns>
+      </TableView>
+   </center>
+   <top>
+      <Label prefHeight="29.0" prefWidth="125.0" text="Level Scores" BorderPane.alignment="CENTER" />
+   </top>
+</BorderPane>

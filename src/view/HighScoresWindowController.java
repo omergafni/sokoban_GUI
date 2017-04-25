@@ -3,14 +3,14 @@ package view;
 import javafx.application.Platform;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.collections.transformation.FilteredList;
+import javafx.collections.transformation.SortedList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableRow;
-import javafx.scene.control.TableView;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseButton;
 import javafx.stage.Stage;
@@ -22,20 +22,27 @@ import java.net.URL;
 import java.sql.Time;
 import java.util.List;
 import java.util.ResourceBundle;
+import java.util.function.Predicate;
 
 
 public class HighScoresWindowController implements Initializable {
 
+    @FXML private TextField filterField;
     @FXML private TableView table;
     @FXML private TableColumn columnName;
     @FXML private TableColumn columnTime;
     @FXML private TableColumn columnSteps;
     @FXML private TableColumn columnLevelName;
     private ObservableList data;
+    @FXML private Button searchPlayerButton;
+    @FXML private Button searchLevelButton;
+    @FXML private TextField searchPlayerField;
+    @FXML private TextField searchLevelField;
 
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        // When user double-click on a row, this will open a new window with user records from DB
         table.setRowFactory( tv -> {
             TableRow<Tuple> row = new TableRow<>();
             row.setOnMouseClicked(event -> {
@@ -48,16 +55,30 @@ public class HighScoresWindowController implements Initializable {
             return row;
         });
 
+        searchPlayerButton.setOnMouseClicked(event -> {
+            String playerName = searchPlayerField.getText();
+            showPlayerScoreTable(playerName);
+        });
+
+        searchLevelButton.setOnMouseClicked(event -> {
+            String levelName = searchLevelField.getText();
+            showLevelScoreTable(levelName);
+
+        });
+
+
+
 
     }
 
     public void buildData(String levelName) {
 
+        // Creating table data using query for the current loaded level:
         ManagePlayer mp = new ManagePlayer();
-        // ManagePlayer class has select() method that allowed to create query
         List<Object[]> list = (List<Object[]>)mp.select("SELECT p.name, s.time, s.steps, s.levelName " +
-                "FROM Player p INNER JOIN p.scores s " + "WHERE s.levelName like "+"'"+levelName+"' "
-                +"ORDER BY s.steps");
+                "FROM Player p INNER JOIN p.scores s " +
+                "WHERE s.levelName like "+"'"+levelName+"' " +
+                "ORDER BY s.steps"); //ManagePlayer.select() is used to create a custom HQL query
         data = FXCollections.observableArrayList();
         for(Object[] o : list){
             Tuple t = new Tuple();
@@ -73,36 +94,27 @@ public class HighScoresWindowController implements Initializable {
         columnLevelName.setCellValueFactory(new PropertyValueFactory<>("levelName"));
 
         table.setItems(data);
-        /*
-        columnTime.setCellValueFactory(new Callback<TableColumn.CellDataFeatures, ObservableValue>() {
-            @Override
-            public ObservableValue call(TableColumn.CellDataFeatures c) {
-                Set s = ((Player) c.getValue()).getScores();
-                Iterator it = s.iterator();
-                Score score = (Score) it.next();
-                return new SimpleStringProperty(score.getTime().toString());
-            }
+
+        // Filtering table data using the top TextField:
+        FilteredList<Tuple> filteredData = new FilteredList<Tuple>(data, e -> true);
+        filterField.setOnKeyReleased(e -> {
+            filterField.textProperty().addListener((observable, oldValue, newValue) -> {
+                filteredData.setPredicate((Predicate<? super Tuple>) tuple -> {
+                    if(newValue == null || newValue.isEmpty())
+                        return true;
+                    //String lowerCaseFilter = newValue.toLowerCase();
+                    if(tuple.getName().contains(newValue))
+                        return true;
+                    //else if(tuple.getLevelName().toLowerCase().contains(lowerCaseFilter))
+                    //    return true;
+                    return false;
+                });
+            });
+            SortedList<Tuple> sortedData = new SortedList<>(filteredData);
+            sortedData.comparatorProperty().bind(table.comparatorProperty());
+            table.setItems(sortedData);
         });
-        columnSteps.setCellValueFactory(new Callback<TableColumn.CellDataFeatures, ObservableValue>() {
-            @Override
-            public ObservableValue call(TableColumn.CellDataFeatures c) {
-                Set s = ((Player) c.getValue()).getScores();
-                Iterator it = s.iterator();
-                Score score = (Score) it.next();
-                return new SimpleStringProperty(Integer.toString(score.getSteps()));
-            }
-        });
-        columnLevelName.setCellValueFactory(new Callback<TableColumn.CellDataFeatures, ObservableValue>() {
-            @Override
-            public ObservableValue call(TableColumn.CellDataFeatures c) {
-                Set s = ((Player) c.getValue()).getScores();
-                Iterator it = s.iterator();
-                Score score = (Score) it.next();
-                return new SimpleStringProperty(score.getLevelName());
-            }
-        });
-        */
-        //table.setItems(null);
+
 
     }
 
@@ -115,7 +127,22 @@ public class HighScoresWindowController implements Initializable {
                 c.buildData(playerName);
                 Stage stage = new Stage();
                 stage.setScene(new Scene(root));
-                stage.setTitle("Player High Scores");
+                stage.setTitle(playerName+" High Scores");
+                stage.showAndWait();
+            } catch (IOException e) {e.printStackTrace();}
+        });
+    }
+
+    public void showLevelScoreTable(String levelName){
+        Platform.runLater( () -> {
+            try {
+                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("LevelScoresWindow.fxml"));
+                Parent root = fxmlLoader.load();
+                LevelScoresWindowController c = fxmlLoader.getController();
+                c.buildData(levelName);
+                Stage stage = new Stage();
+                stage.setScene(new Scene(root));
+                stage.setTitle(levelName+" High Scores");
                 stage.showAndWait();
             } catch (IOException e) {e.printStackTrace();}
         });
