@@ -11,13 +11,6 @@
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sokoban_gui.iml" afterPath="$PROJECT_DIR$/sokoban_gui.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/controller/commands/SaveScoreCommand.java" afterPath="$PROJECT_DIR$/src/controller/commands/SaveScoreCommand.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/view/HighScoresWindow.fxml" afterPath="$PROJECT_DIR$/src/view/HighScoresWindow.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/view/HighScoresWindowController.java" afterPath="$PROJECT_DIR$/src/view/HighScoresWindowController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/view/LevelScoresWindow.fxml" afterPath="$PROJECT_DIR$/src/view/LevelScoresWindow.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/view/MainWindow.fxml" afterPath="$PROJECT_DIR$/src/view/MainWindow.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/view/PlayerScoresWindow.fxml" afterPath="$PROJECT_DIR$/src/view/PlayerScoresWindow.fxml" />
     </list>
     <list id="14a69492-4d72-4884-a0d1-7c9632f8f3c1" name="Rejected commit: Default" comment="v1.0" />
     <ignored path="JavaFxApplication.iws" />
@@ -1035,7 +1028,7 @@
       <workItem from="1491838368571" duration="63540000" />
       <workItem from="1492946906406" duration="26525000" />
       <workItem from="1494178713756" duration="241000" />
-      <workItem from="1495097300798" duration="393000" />
+      <workItem from="1495097300798" duration="412000" />
     </task>
     <task id="LOCAL-00001" summary="v1.0">
       <created>1485084867821</created>
@@ -1163,11 +1156,18 @@
       <option name="project" value="LOCAL" />
       <updated>1493106966333</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="ms3 1.2">
+      <created>1495097708107</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1495097708107</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="157373000" />
+    <option name="totallyTimeSpent" value="157392000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1261,7 +1261,8 @@
     <MESSAGE value="ms3" />
     <MESSAGE value="ms3 1.0" />
     <MESSAGE value="ms3 1.1" />
-    <option name="LAST_COMMIT_MESSAGE" value="ms3 1.1" />
+    <MESSAGE value="ms3 1.2" />
+    <option name="LAST_COMMIT_MESSAGE" value="ms3 1.2" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
