@@ -49,7 +49,6 @@ public class HighScoresWindowController implements Initializable {
                 if(!row.isEmpty() && event.getButton() == MouseButton.PRIMARY && event.getClickCount() == 2){
                     Tuple clickedRow = row.getItem();
                     showPlayerScoreTable(clickedRow.getName());
-                    System.out.println(clickedRow.getName());
                 }
             });
             return row;

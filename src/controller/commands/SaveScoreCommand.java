@@ -6,7 +6,6 @@ import model.database.Score;
 import view.MyView;
 
 import java.io.IOException;
-import java.util.HashSet;
 
 public class SaveScoreCommand implements Command{
 
