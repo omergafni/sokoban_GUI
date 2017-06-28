@@ -19,7 +19,6 @@ public class Level implements Serializable {
 	private int maxHeight;
 	private int maxWidth;
 	private int stepsCounter;
-	//private int timer; //??????
 	private char[][] levelAsChar = null;
 
 	public Level() {}

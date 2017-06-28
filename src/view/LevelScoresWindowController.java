@@ -17,8 +17,7 @@ import java.util.ResourceBundle;
 
 public class LevelScoresWindowController implements Initializable{
 
-    @FXML
-    private TableView table;
+    @FXML private TableView table;
     @FXML private TableColumn columnTime;
     @FXML private TableColumn columnSteps;
     @FXML private TableColumn columnPlayerName;

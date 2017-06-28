@@ -10,10 +10,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
-import javafx.scene.control.ButtonType;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextInputDialog;
+import javafx.scene.control.*;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
@@ -39,6 +36,7 @@ public class MyView extends Observable implements View, Initializable {
 	@FXML private Label timer;
 	private Timeline timeline;
 	private int seconds, minutes, hours;
+	boolean levelLoaded = false;
 
 
 	@Override
@@ -105,6 +103,7 @@ public class MyView extends Observable implements View, Initializable {
 		System.out.println("load command sent: " + loadCommand);
 		stopTimer();
 		startTimer();
+		levelLoaded = true;
 	}
 
 	public void saveLevel() {
@@ -278,5 +277,69 @@ public class MyView extends Observable implements View, Initializable {
 		});
 	}
 
+	public void solve(){
+		if(!levelLoaded){
+			passException(new IOException("Please load a level first"));
+			return;
+		}
+		setChanged();
+		notifyObservers("solve");
+	}
+
+	public void solutionHandler(String[] solution){
+
+		if(solution.length == 0) {
+			passException(new Exception("Solution service is not available"));
+			return;
+		}
+
+		restartLevel();
+		Platform.runLater(()->{
+			Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+			alert.setTitle("Level Solver");
+			alert.setHeaderText("Your solution has arrived!");
+			alert.setContentText("Choose your option:");
+
+			ButtonType buttonTypeSolve = new ButtonType("Solve");
+			ButtonType buttonTypeHint = new ButtonType("Hint");
+			ButtonType buttonTypeCancel = new ButtonType("Cancel", ButtonBar.ButtonData.CANCEL_CLOSE);
+
+			alert.getButtonTypes().setAll(buttonTypeSolve, buttonTypeHint, buttonTypeCancel);
+
+			Optional<ButtonType> result = alert.showAndWait();
+			if (result.get() == buttonTypeSolve){
+				new Thread(()->{
+					for(String s : solution){
+						try {
+							Thread.sleep(500);
+						} catch (InterruptedException e) {
+							e.printStackTrace();
+						}
+						setChanged();
+						notifyObservers(s);
+					}
+				}).start();
+
+			} else if (result.get() == buttonTypeHint) {
+				Platform.runLater(()->{
+					Alert a = new Alert(Alert.AlertType.INFORMATION);
+					a.setTitle("Hint");
+					a.setHeaderText(null);
+					// Building the hint
+					StringBuilder sb = new StringBuilder();
+					for(int i = 0; i<solution.length/2; i++){
+						sb.append(solution[i]+"->");
+					}
+					sb.delete(sb.lastIndexOf("->"),sb.lastIndexOf("->")+2);
+					a.setContentText(sb.toString());
+					a.showAndWait();
+
+				});
+			} else {
+				alert.close();
+			}
+		});
+
+	}
 
 }

@@ -45,6 +45,7 @@ public class SokobanController implements Controller, Observer {
 		commands.put("display", new DisplayCommand(model,myView/*myView.getGUIDisplayer()*/));
 		commands.put("restart",new RestartLevelCommand(myModel));
 		commands.put("savescore",new SaveScoreCommand(myView,myModel));
+		commands.put("solve",new SolveCommand(myModel,myView));
 		start();
 	}
 
@@ -60,6 +61,7 @@ public class SokobanController implements Controller, Observer {
 		commands.put("exit", new ExitCommand(this));
 		commands.put("display", new DisplayCommand(myModel,myView/*new CLIDisplayer(myServer)*/));
 		commands.put("restart",new RestartLevelCommand(myModel));
+		commands.put("solve",new SolveCommand(myModel,myView));
 		start();
 	}
 

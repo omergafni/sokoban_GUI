@@ -33,12 +33,11 @@ public class HighScoresWindowController implements Initializable {
     @FXML private TableColumn columnTime;
     @FXML private TableColumn columnSteps;
     @FXML private TableColumn columnLevelName;
-    private ObservableList data;
     @FXML private Button searchPlayerButton;
     @FXML private Button searchLevelButton;
     @FXML private TextField searchPlayerField;
     @FXML private TextField searchLevelField;
-
+    private ObservableList data;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
