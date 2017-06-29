@@ -16,6 +16,9 @@ import java.util.Observer;
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.BlockingQueue;
 
+/**
+ * SokobanController is a Controller that runs sokoban commands and connects between the sokoban view and model
+ */
 public class SokobanController implements Controller, Observer {
 
 	private MyModel myModel;
@@ -26,12 +29,9 @@ public class SokobanController implements Controller, Observer {
 	private boolean isRunning = true;
 
 	/**
-	 * @param model
-	 * @param view
-	 *
-	 * Two different constructor are provided,
-	 * one for running without a server, and the second to run with a server and without GUI
-	 *
+	 * Constructor for GUI mode, initiates the sokoban commands map
+	 * @param model a Model
+	 * @param view a View
 	 */
 
 	public SokobanController(Model model, View view) {
@@ -49,7 +49,11 @@ public class SokobanController implements Controller, Observer {
 		start();
 	}
 
-
+	/**
+	 * Constructor for server mode, initiates the sokoban commands map
+	 * @param model a Model
+	 * @param server a Server
+	 */
 	public SokobanController(Model model, MyServer server) {
 		this.myModel = (MyModel)model;
 		this.myView = null;
@@ -65,6 +69,11 @@ public class SokobanController implements Controller, Observer {
 		start();
 	}
 
+	/**
+	 * Catches the command that the Observable threw
+	 * @param o The Observable that threw the command
+	 * @param arg Is a string that contains the command and the parameters
+	 */
 	@Override
 	public void update(Observable o, Object arg) {
 		try {
@@ -78,7 +87,13 @@ public class SokobanController implements Controller, Observer {
 				myView.passException(e);
 		}
 	}
-	
+
+	/**
+	 * Processes the command - splits it to the command name and the parameters
+	 * @param input command string
+	 * @return returns a Command object
+	 * @throws IOException
+	 */
 	private Command commandProcessor(String input) throws IOException{
 		String toProcess = input;
 		toProcess = toProcess.toLowerCase();
@@ -90,6 +105,9 @@ public class SokobanController implements Controller, Observer {
 		return c;
 	}
 
+	/**
+	 * Runs the blocking queues that executes the commands
+	 */
 	@Override
 	public void start() {
 		new Thread(new Runnable() {
@@ -113,9 +131,16 @@ public class SokobanController implements Controller, Observer {
 		).start();
 	}
 
+	/**
+	 * Stops the blocking queue
+	 */
 	@Override
 	public void stop() {this.isRunning = false;}
 
+	/**
+	 * Inserts a command into the blocking queue
+	 * @param command
+	 */
 	private void insertCommand(Command command) {
 		try
 		{
@@ -127,11 +152,15 @@ public class SokobanController implements Controller, Observer {
 
 	public MyServer getServer() {return myServer;}
 
+	/**
+	 * Sends an exception to an output stream
+	 * @param e The exception to send
+	 * @param out The output stream to send the exception to
+	 */
 	private void exceptionHandler(Exception e, OutputStream out) {
 		PrintWriter writer = new PrintWriter(out);
 		writer.println(e.getMessage());
 		writer.flush();
 	}
-
 }
 

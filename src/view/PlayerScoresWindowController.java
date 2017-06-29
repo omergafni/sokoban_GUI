@@ -14,7 +14,9 @@ import java.net.URL;
 import java.sql.Time;
 import java.util.List;
 import java.util.ResourceBundle;
-
+/**
+ * The controller class for the player score window view
+ */
 public class PlayerScoresWindowController implements Initializable{
 
     @FXML
@@ -29,7 +31,10 @@ public class PlayerScoresWindowController implements Initializable{
 
     }
 
-
+    /**
+     * Populates the main table view
+     * @param playerName The current player's name
+     */
     public void buildData(String playerName) {
 
         ManagePlayer mp = new ManagePlayer();

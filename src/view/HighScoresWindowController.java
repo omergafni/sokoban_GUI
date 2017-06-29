@@ -25,6 +25,9 @@ import java.util.ResourceBundle;
 import java.util.function.Predicate;
 
 
+/**
+ * The controller class for the high-scores window view
+ */
 public class HighScoresWindowController implements Initializable {
 
     @FXML private TextField filterField;
@@ -39,6 +42,11 @@ public class HighScoresWindowController implements Initializable {
     @FXML private TextField searchLevelField;
     private ObservableList data;
 
+    /**
+     * Initializes the view's components
+     * @param location
+     * @param resources
+     */
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         // When user double-click on a row, this will open a new window with user records from DB
@@ -69,6 +77,10 @@ public class HighScoresWindowController implements Initializable {
 
     }
 
+    /**
+     * Populates the main table view
+     * @param levelName The current level's name
+     */
     public void buildData(String levelName) {
 
         // Creating table data using query for the current loaded level:
@@ -116,6 +128,10 @@ public class HighScoresWindowController implements Initializable {
 
     }
 
+    /**
+     * Opens a player score window
+     * @param playerName The name of the player to present
+     */
     public void showPlayerScoreTable(String playerName){
         Platform.runLater( () -> {
             try {
@@ -131,6 +147,10 @@ public class HighScoresWindowController implements Initializable {
         });
     }
 
+    /**
+     * Opens a level score window
+     * @param levelName The name of the level to present
+     */
     public void showLevelScoreTable(String levelName){
         Platform.runLater( () -> {
             try {

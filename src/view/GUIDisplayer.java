@@ -7,6 +7,9 @@ import javafx.scene.image.Image;
 import model.data.level.Level;
 import model.receivers.display.Displayer;
 
+/**
+ * GUIDisplayer draws the sokoban game board
+ */
 public class GUIDisplayer extends Canvas implements Displayer
 {
 	protected Level level;
@@ -15,6 +18,10 @@ public class GUIDisplayer extends Canvas implements Displayer
 
 	public GUIDisplayer() {}
 
+	/**
+	 * Draws the elements on the board
+	 * @throws Exception
+	 */
 	private void redraw() throws Exception {
 		if(level == null)
 			return;
@@ -51,7 +58,6 @@ public class GUIDisplayer extends Canvas implements Displayer
 				if(c == 'A'){
 					gc.drawImage(player,cellWidth*j, cellHeight*i, cellWidth, cellHeight);
 				}
-
 			}
 		}
 		if(level.checkIfWin()) {
@@ -60,6 +66,9 @@ public class GUIDisplayer extends Canvas implements Displayer
 		Platform.runLater(() -> requestFocus());
 	}
 
+	/**
+	 * Shows the logo
+	 */
 	public void showLogo() {
 
 		Image logo = new Image(getClass().getResourceAsStream("/resources/images/logo.jpg"));
@@ -68,6 +77,10 @@ public class GUIDisplayer extends Canvas implements Displayer
 
 	}
 
+	/**
+	 * Displays the board
+	 * @throws Exception
+	 */
 	@Override
 	public void display() throws Exception{
 		redraw();

@@ -7,6 +7,9 @@ import view.MyView;
 
 import java.io.IOException;
 
+/**
+ * SaveScoreCommand saves the user score
+ */
 public class SaveScoreCommand implements Command{
 
     private ManagePlayer mp;
@@ -14,10 +17,16 @@ public class SaveScoreCommand implements Command{
     private MyModel myModel;
     private String playerName = null;
 
+    /**
+     * Constructor
+     * @param myView is a View
+     * @param myModel is a Model
+     */
     public SaveScoreCommand(MyView myView, MyModel myModel){
         this.myView = myView;
         this.myModel = myModel;
     }
+
 
     @Override
     public void execute() throws Exception {

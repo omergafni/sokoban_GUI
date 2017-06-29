@@ -4,6 +4,9 @@ import java.awt.*;
 import java.io.Serializable;
 
 @SuppressWarnings("serial")
+/**
+ * Represents a wall world object
+ */
 public class Wall extends WorldObject implements Serializable {
 
 	public Wall() {}

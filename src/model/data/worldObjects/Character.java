@@ -4,6 +4,9 @@ import java.awt.*;
 import java.io.Serializable;
 
 @SuppressWarnings("serial")
+/**
+ * Represents a character world object
+ */
 public class Character extends WorldObject implements Serializable {
 
 	public Character() {}

@@ -4,9 +4,17 @@ import java.awt.*;
 import java.io.Serializable;
 
 @SuppressWarnings("serial")
+/**
+ * Represents a target world object
+ */
 public class Target extends WorldObject implements Serializable {
 
 	public Target() {}
+
+	/**
+	 * Constructor
+	 * @param position position
+	 */
 	public Target(Point position) {	super(position); }
 
 	@Override

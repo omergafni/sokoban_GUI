@@ -10,6 +10,9 @@ import java.io.Serializable;
 import java.util.ArrayList;
 
 @SuppressWarnings("serial")
+/**
+ * Represent a sokoban level
+ */
 public class Level implements Serializable {
 
 	private String levelName;
@@ -22,6 +25,11 @@ public class Level implements Serializable {
 	private char[][] levelAsChar = null;
 
 	public Level() {}
+
+	/**
+	 * A constructor that initiates a level with a grid
+	 * @param grid
+	 */
 	public Level(ArrayList<ArrayList<WorldObject>> grid) {
 		try 
 		{			
@@ -34,8 +42,10 @@ public class Level implements Serializable {
 		}
 		catch (Exception s) { System.out.println(s.getMessage()); }
 	}
-	
-	// Finding all TARGET's coordinates
+
+	/**
+	 * Finds all target coordinates
+	 */
 	private void findSolCoordinates() {
 		for(int i = 0; i < grid.size(); i++) 
 			for(int j = 0; j < grid.get(i).size(); j++) {
@@ -43,7 +53,11 @@ public class Level implements Serializable {
 				if (w.getWorldObjectType() == WorldObjectType.TARGET) { solutionCoordinates.add(w.getPosition()); }
 			}
 	}
-	
+
+	/**
+	 * Finds the character
+	 * @return returns a Character object
+	 */
 	public Character getCharacter() {
 		if (character != null)
 		{
@@ -68,7 +82,11 @@ public class Level implements Serializable {
 	public void setSolutionCoordinates(ArrayList<Point> solutionCoordinates) {
 		this.solutionCoordinates = solutionCoordinates;
 	}
-	
+
+	/**
+	 * Check if WIN conditions are met
+	 * @return
+	 */
 	public boolean checkIfWin() {
 
 		for(Point p : solutionCoordinates) {
@@ -83,6 +101,10 @@ public class Level implements Serializable {
 
 	public WorldObject getWorldObject(Point position) {return grid.get((int)position.getX()).get((int)position.getY());}
 
+	/**
+	 * Returns a char[][] representation of a Level
+	 * @return
+	 */
 	public char[][] getLevelAsCharMatrix(){
 		if(levelAsChar != null) return levelAsChar;
 		char[][] matrix = new char[maxHeight][maxWidth];
@@ -94,7 +116,12 @@ public class Level implements Serializable {
 		return matrix;
 	}
 
-	// Return adjacent of the given position and direction
+	/**
+	 * Return adjacent of the given position and direction
+	 * @param position A position to start from
+	 * @param direction the direction
+	 * @return
+	 */
 	public WorldObject getAdjacent(Point position, Direction direction) {
 				
 		int x = (int)position.getX();
@@ -114,7 +141,9 @@ public class Level implements Serializable {
 		} 
 	}
 
-	// Setting the maxWidth and maxHeight variables to the maximum grid's height and width
+	/**
+	 * Setting the maxWidth and maxHeight variables to the maximum grid's height and width
+ 	 */
 	private void findWidthHeight() {
 		maxHeight = grid.size();
 		maxWidth = 0;
