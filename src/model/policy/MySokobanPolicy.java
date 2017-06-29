@@ -8,14 +8,26 @@ import model.data.worldObjects.WorldObjectType;
 import model.receivers.move.Direction;
 import model.receivers.move.Move;
 
+/**
+ * MySokobanPolicy defines rules for a sokoban game
+ */
 public class MySokobanPolicy implements Policy {
 
 	private Level level;
 	private Character character;
 	private Direction direction;
 
+	/**
+	 * Constructor
+	 * @param level Level
+	 */
 	public MySokobanPolicy(Level level) {this.level = level; this.character = level.getCharacter();}
-	
+
+	/**
+	 * Checks if a move commands is legal according to the policy
+	 * @param moveCommand Move command
+	 * @throws Exception
+	 */
 	@Override
 	public void execute(Move moveCommand) throws Exception {
 		
@@ -37,7 +49,12 @@ public class MySokobanPolicy implements Policy {
 		}
 		//System.out.println(level.getStepsCounter());
 	}
-	
+
+	/**
+	 * Pushes a box in a direction
+	 * @param box A box object
+	 * @param direction A direction to push in
+	 */
 	private void push(Box box, Direction direction) {
 				
 		if (!wallCollision(box,direction))
@@ -48,6 +65,11 @@ public class MySokobanPolicy implements Policy {
 		
 	}
 
+	/**
+	 * Checks if a move is possible in a direction
+	 * @param direction
+	 * @return
+	 */
 	public boolean checkIfMovePossible(Direction direction) {
 		if (wallCollision(character,direction))
 			return false;
@@ -76,6 +98,12 @@ public class MySokobanPolicy implements Policy {
 		return true;
 	}
 	*/
+
+	/**
+	 * Checks if a box push is needed after a player move in a direction
+	 * @param direction A direction
+	 * @return
+	 */
 	private boolean checkIfNeedPush(Direction direction) {
 		
 		WorldObject potentialBox = level.getAdjacent(character.getPosition(),direction);
@@ -104,7 +132,13 @@ public class MySokobanPolicy implements Policy {
 		}
 		return false;
 	}
-	
+
+	/**
+	 * Checks if there is a wall in the way
+	 * @param worldObject a World object
+	 * @param direction A direction
+	 * @return
+	 */
 	private boolean wallCollision(WorldObject worldObject, Direction direction) {
 		
 		if(level.getAdjacent(worldObject.getPosition(), direction).getWorldObjectType() == WorldObjectType.WALL)

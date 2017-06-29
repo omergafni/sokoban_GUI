@@ -3,10 +3,18 @@ package model.data.worldObjects;
 import java.awt.*;
 import java.io.Serializable;
 
+/**
+ * Represents a floor world object
+ */
 @SuppressWarnings("serial")
 public class Floor extends WorldObject implements Serializable {
 
 	public Floor() {}
+
+	/**
+	 * Constructor
+	 * @param position position
+	 */
 	public Floor(Point position) { super(position); }
 
 	@Override

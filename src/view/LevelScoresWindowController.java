@@ -15,6 +15,9 @@ import java.sql.Time;
 import java.util.List;
 import java.util.ResourceBundle;
 
+/**
+ * The controller class for the level score window view
+ */
 public class LevelScoresWindowController implements Initializable{
 
     @FXML private TableView table;
@@ -29,6 +32,10 @@ public class LevelScoresWindowController implements Initializable{
     }
 
 
+    /**
+     * Populates the main table view
+     * @param levelName The current level's name
+     */
     public void buildData(String levelName) {
 
         ManagePlayer mp = new ManagePlayer();

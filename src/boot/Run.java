@@ -11,11 +11,18 @@ import javafx.stage.Stage;
 import model.MyModel;
 import view.MyView;
 
-
+/**
+ * Application's starting point
+ */
 public class Run extends Application {
 	
 	private FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/view/MainWindow.fxml"));
 
+	/**
+	 * GUI Starting point
+	 * @param primaryStage JavaFX primary stage
+	 * @throws Exception
+	 */
 	@Override
 	public void start(Stage primaryStage) throws Exception {
 

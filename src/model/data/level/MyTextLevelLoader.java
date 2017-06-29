@@ -7,12 +7,21 @@ import java.awt.*;
 import java.io.*;
 import java.util.ArrayList;
 
+/**
+ * MyTextLevelLoader is a LevelLoader that loads a Sokoban level from a text file
+ */
 public class MyTextLevelLoader implements LevelLoader{
 
 	BufferedReader reader;
 	
 	public MyTextLevelLoader() {}
-	
+
+	/**
+	 * Loads a level from a text file
+	 * @param input an InputStream
+	 * @return a Level object
+	 * @throws IOException
+	 */
 	@Override
 	public Level loadLevel(InputStream input) throws IOException  
 	{	

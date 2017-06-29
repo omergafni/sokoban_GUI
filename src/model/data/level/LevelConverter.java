@@ -29,6 +29,11 @@ public class LevelConverter {
        return retGrid;
    }
 
+    /**
+     * Converts a row to a char array
+     * @param row an ArrayList<WorldObject> row
+     * @return returns a char[]
+     */
     static private char[] rowToCharArray(ArrayList<WorldObject> row) {
 
         char[] newRow = new char[row.size()];

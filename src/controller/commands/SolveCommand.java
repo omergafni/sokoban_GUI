@@ -8,17 +8,29 @@ import view.MyView;
 import java.io.*;
 import java.net.Socket;
 
+/**
+ * SolveCommand requests a solution from a remote server
+ */
 public class SolveCommand implements Command {
 
     private MyModel model;
     private MyView view;
 
+    /**
+     * Constructor
+     * @param model is a Model
+     * @param view is a View
+     */
     public SolveCommand(MyModel model, MyView view) {
         this.model = model;
         this.view = view;
 
     }
 
+    /**
+     * Opens a socket to the remote server, sends the level to be solved and handles the received solution
+     * @throws Exception
+     */
     @Override
     public void execute() throws Exception {
         LevelGrid level = LevelConverter.convertLevel(model.getLevel());
@@ -48,11 +60,21 @@ public class SolveCommand implements Command {
         theServer.close();
     }
 
+    /**
+     * Unused
+     * @param params String array of values
+     * @throws IOException
+     */
     @Override
     public void setParams(String[] params) throws IOException {
         // None
     }
 
+    /**
+     * Decompresses a compressed solution to a user readable format
+     * @param compSol compressed solution
+     * @return
+     */
     private String[] decompressedSolution(String compSol){
 
         String[] sol = new String[compSol.length()];

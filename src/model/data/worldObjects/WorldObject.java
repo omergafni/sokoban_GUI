@@ -4,6 +4,9 @@ import java.awt.*;
 import java.io.Serializable;
 
 @SuppressWarnings("serial")
+/**
+ * Represents a general world object that is a part of the Sokoban level map
+ */
 public abstract class WorldObject implements Serializable {
 
 	protected Point position;

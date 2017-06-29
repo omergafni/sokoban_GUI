@@ -8,6 +8,9 @@ import model.receivers.move.Move;
 
 import java.util.Observable;
 
+/**
+ * MyModel is a Model that represents a sokoban MVC model
+ */
 public class MyModel extends Observable implements Model {
 
 	private Level level = null;
@@ -18,6 +21,11 @@ public class MyModel extends Observable implements Model {
 	private Policy policy = null;
 	private String currentLevelPath= null;
 
+	/**
+	 * Moves the character in a direction
+	 * @param direction The direction
+	 * @throws Exception
+	 */
 	@Override
 	public void move(Direction direction) throws Exception {
 		if (level == null){
@@ -67,6 +75,9 @@ public class MyModel extends Observable implements Model {
 
 	public void setCurrentLevelPath(String path) {this.currentLevelPath=path;}
 
+	/**
+	 * Restarts the level
+	 */
 	public void restartLevel() {
 		String loadCommand = "load "+currentLevelPath;
 		setChanged();
